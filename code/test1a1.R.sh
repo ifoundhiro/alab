@@ -11,14 +11,19 @@
 #SBATCH --error=/dev/null
 
 # Set bash program name.
-program="Rscript"
-version="install"
+program="test1"
+version="a1"
 # Get current datetime.
 datetime="$(date +'%Y%m%d_%H%M%S_%Z')"
 # Activate environment.
 source activate testrenv
 
+# Set input parameters.
+params='list(
+"test"=0
+)'
+
 # Execute script.
 Rscript --verbose ${program}${version}.R \
---args ${program} ${version} \
+${program} ${version} "${params}" \
 > ../output/logs/${program}${version}_${SLURM_JOB_ID}.log 2>&1

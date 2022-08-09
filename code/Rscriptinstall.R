@@ -34,7 +34,7 @@ jobinfo(program=program,progver=progver)
 # Main #
 ########
 
-install.packages("ggsignif",repos="http://cran.us.r-project.org")
+#install.packages("ggsignif",repos="http://cran.us.r-project.org")
 #install.packages("stringr",repos="http://cran.us.r-project.org")
 #install.packages("zip",repos="http://cran.us.r-project.org")
 #install.packages("R6",repos="http://cran.us.r-project.org")
@@ -74,7 +74,7 @@ install.packages("ggsignif",repos="http://cran.us.r-project.org")
 #install.packages("qlcMatrix",repos="http://cran.us.r-project.org")
 #install.packages("testit",repos="http://cran.us.r-project.org")
 #install.packages("openxlsx", dependencies = TRUE, repos="http://cran.us.r-project.org")
-#install.packages("Hmisc",repos="http://cran.us.r-project.org")
+install.packages("Hmisc",repos="http://cran.us.r-project.org")
 #source("https://bioconductor.org/biocLite.R")
 #biocLite("pcaMethods",suppressUpdates=TRUE)
 #install.packages("arsenal",repos="http://cran.us.r-project.org")
@@ -118,6 +118,5 @@ install.packages("ggsignif",repos="http://cran.us.r-project.org")
 # Wrap-up #
 ###########
 
-# Display job information.
 # Display job information.
 jobinfo(program=program,progver=progver,disp_pack=1)
