@@ -3,17 +3,15 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 02/13/2022: Modified.
-# 02/26/2021: Previously modified.
-# 02/26/2021: Created.
+# 08/09/2022: Modified.
+# 08/09/2022: Previously modified.
+# 08/09/2022: Created.
 # Description: 
 #   - Various utility functions.
 # Modifications:
-#   02/26/2021:
+#   08/09/2022:
 #     - Duplicated from util.R in 
-#       https://github.com/ifoundhiro/rover/blob/master/code/preamble.R
-#   02/13/2022:
-#     - Remove out-of-scope functions.
+#       /nfs/sloanlab003/projects/malonephi1_proj/hiro/phi2/code.
 ##########################################################################
 
 # Load libraries.

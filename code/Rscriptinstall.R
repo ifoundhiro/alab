@@ -3,15 +3,15 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################   
-# 02/26/2021: Modified.
-# 02/26/2021: Previously modified.
-# 02/26/2021: Created.
+# 08/09/2022: Modified.
+# 08/09/2022: Previously modified.
+# 08/09/2022: Created.
 # Description: 
 #   - Program to install packages in Rscript.
 # Modifications:
-#   02/26/2021:
-#     - Duplicated from preamble.R in 
-#       https://github.com/ifoundhiro/rover/blob/master/code/RscriptInstall.R
+#   08/09/2022:
+#     - Duplicated from Rscriptinstall.R in 
+#       /nfs/sloanlab003/projects/malonephi1_proj/hiro/phi2/code.
 ##########################################################################
 
 #########

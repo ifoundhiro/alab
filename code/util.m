@@ -3,14 +3,15 @@
 % Position: Doctoral Student
 % Organization: MIT Sloan
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 11/12/2020: Modified.
-% 11/10/2020: Previously modified.
-% 11/10/2020: Created.
+% 08/09/2022: Modified.
+% 08/09/2022: Previously modified.
+% 08/09/2022: Created.
 % Description: 
 %   - Program to define utility functions.
 % Modifications:
-%   11/12/2020:
-%     - Add function to declare global varibles for relative paths.
+%   08/09/2022:
+%     - Duplicated from util.m in 
+%       /nfs/sloanlab003/projects/malonephi1_proj/hiro/phi2/code.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Declare class.

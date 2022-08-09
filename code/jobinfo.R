@@ -3,17 +3,15 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################   
-# 09/08/2021: Modified.
-# 02/26/2021: Previously modified.
-# 02/26/2021: Created.
+# 08/09/2022: Modified.
+# 08/09/2022: Previously modified.
+# 08/09/2022: Created.
 # Description: 
 #   - Program to display job information.
 # Modifications:
-#   02/26/2021:
-#     - Duplicated from preamble.R in 
-#       https://github.com/ifoundhiro/rover/blob/master/code/jobinfo.R
-#   09/08/2021:
-#     - Convert LSB parameters to SLURM.
+#   08/09/2022:
+#     - Duplicated from jobinfo.R in 
+#       /nfs/sloanlab003/projects/malonephi1_proj/hiro/phi2/code.
 ##########################################################################
 
 jobinfo<-function(

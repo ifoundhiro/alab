@@ -3,22 +3,17 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 11/01/2021: Modified.
-# 08/21/2021: Previously modified.
-# 08/18/2021: Created.
+# 08/09/2022: Modified.
+# 08/09/2022: Previously modified.
+# 08/09/2022: Created.
 # Description: 
 #   - Program to define utility functions.
 #   - Based on code from following git repos:
 #     https://github.com/cfarronato/freelancer_covid/blob/hiro/code/util.py
 # Modifications:
-#   08/18/2021:
+#   08/09/2022:
 #     - Duplicated from util.py in 
-#       /nfs/sloanlab003/projects/malonephi1_proj/hiro/phi1/code.
-#   08/21/2021:
-#     - Modify parstore() to enable numeric split column.
-#     - Reflect display options in store() in parstore().
-#   11/01/2021:
-#     - Pass additional parameters from parfetch() to fetch().
+#       /nfs/sloanlab003/projects/malonephi1_proj/hiro/phi2/code.
 ##########################################################################
 
 # Import modules.
