@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/hmiura/hiro/03_Class/05_2022_Fall/alab/code/test1a1.py", line 18, in <module>
+    progname=sys.argv[0].split('.')[0]
+NameError: name 'sys' is not defined

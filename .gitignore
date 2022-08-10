@@ -1,7 +1,6 @@
 data/
 output/raw/
 output/derived/
-output/logs
 temp/
 test/
 archive/

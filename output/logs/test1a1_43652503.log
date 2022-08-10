@@ -1,0 +1,134 @@
+running
+  '/home/hmiura/anaconda3/envs/testrenv/lib/R/bin/R --no-echo --no-restore --file=test1a1.R --args test1 a1 list(
+"test"=0
+)'
+
+
+***************************
+***** Job Information *****
+***************************
+***** Datetime:           2022-08-09 18:20:20 EDT 
+***** Job ID:             43652503 
+***** Number of core(s):  1 
+***** User:               hmiura 
+***** Environment:        /home/hmiura/anaconda3/envs/testrenv 
+***** Platform:           x86_64-conda-linux-gnu 
+***** Software version:   R version 4.2.1 (2022-06-23) 
+***** Hostname:           node1320 
+***** Working directory:  /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code 
+***** Program name:       test1a1
+***** CPU model name:
+model name	: AMD EPYC 7352 24-Core Processor
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+
+***** Input parameters:
+$test
+[1] 0
+
+
+
+*****
+***** DO SOMETHING HERE
+*****
+***************************
+***** Job Information *****
+***************************
+***** Datetime:           2022-08-09 18:20:22 EDT 
+***** Job ID:             43652503 
+***** Number of core(s):  1 
+***** User:               hmiura 
+***** Environment:        /home/hmiura/anaconda3/envs/testrenv 
+***** Platform:           x86_64-conda-linux-gnu 
+***** Software version:   R version 4.2.1 (2022-06-23) 
+***** Hostname:           node1320 
+***** Working directory:  /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code 
+***** Program name:       test1a1
+***** CPU model name:
+model name	: AMD EPYC 7352 24-Core Processor
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+
+***********************************
+***** Installed User Packages *****
+***********************************
+                  Package   Version
+backports       backports     1.4.1
+base64enc       base64enc     0.1-3
+checkmate       checkmate     2.1.0
+cli                   cli     3.3.0
+colorspace     colorspace     2.0-3
+data.table     data.table    1.14.2
+deldir             deldir     1.0-6
+digest             digest    0.6.29
+doParallel     doParallel    1.0.17
+evaluate         evaluate      0.15
+fansi               fansi     1.0.3
+farver             farver     2.1.1
+fastmap           fastmap     1.1.0
+foreach           foreach     1.5.2
+Formula           Formula     1.2-4
+ggplot2           ggplot2     3.3.6
+glue                 glue     1.6.2
+gridExtra       gridExtra       2.3
+gtable             gtable     0.3.0
+highr               highr       0.9
+Hmisc               Hmisc     4.7-0
+htmlTable       htmlTable     2.4.1
+htmltools       htmltools     0.5.3
+htmlwidgets   htmlwidgets     1.5.4
+interp             interp     1.1-3
+isoband           isoband     0.2.5
+iterators       iterators    1.0.14
+jpeg                 jpeg     0.1-9
+jsonlite         jsonlite     1.8.0
+knitr               knitr      1.39
+labeling         labeling     0.4.2
+latticeExtra latticeExtra    0.6-30
+lifecycle       lifecycle     1.0.1
+magrittr         magrittr     2.0.3
+munsell           munsell     0.5.0
+pillar             pillar     1.8.0
+pkgconfig       pkgconfig     2.0.3
+png                   png     0.1-7
+R6                     R6     2.5.1
+RColorBrewer RColorBrewer     1.1-3
+Rcpp                 Rcpp     1.0.9
+RcppEigen       RcppEigen 0.3.3.9.2
+rlang               rlang     1.0.4
+rstudioapi     rstudioapi      0.13
+scales             scales     1.2.0
+stringi           stringi     1.7.8
+stringr           stringr     1.4.0
+tibble             tibble     3.1.8
+utf8                 utf8     1.2.2
+vctrs               vctrs     0.4.1
+viridis           viridis     0.6.2
+viridisLite   viridisLite     0.4.0
+withr               withr     2.5.0
+xfun                 xfun      0.31
+yaml                 yaml     2.3.5
