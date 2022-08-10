@@ -3,12 +3,14 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/09/2022: Modified.
+# 08/10/2022: Modified.
 # 08/09/2022: Previously modified.
 # 08/09/2022: Created.
 # Description: 
 #   - Test program.
 # Modifications:
+#   08/10/2022:
+#     - Remove parallel components.
 ##########################################################################
 
 #########
@@ -26,8 +28,6 @@ argsi=argsi+1; progver=args[argsi]
 # Load and execute function to display job info.
 source("jobinfo.R")
 jobinfo(program=program,progver=progver)
-# Load libraries.
-library(doParallel)         # For parallel processing.
 # Load user defined module for utility functions.
 source("util.R")
 # Get input parameters.
@@ -48,9 +48,5 @@ cat("\n*****\n\n")
 ###########
 # Wrap-up #
 ###########
-# Stop parallel processing.
-if(as.numeric(Sys.getenv("SLURM_JOB_CPUS_PER_NODE"))>1){
-  stopCluster(cl)
-}
 # Display job information.
 jobinfo(program=program,progver=progver,disp_pack=1)

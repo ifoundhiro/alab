@@ -13,8 +13,6 @@
 # Set bash program name.
 program="test1"
 version="a1"
-# Get current datetime.
-datetime="$(date +'%Y%m%d_%H%M%S_%Z')"
 # Activate environment.
 source activate testrenv
 
