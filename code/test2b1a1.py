@@ -3,9 +3,9 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/10/2022: Modified.
-# 08/10/2022: Previously modified.
-# 08/10/2022: Created.
+# 08/22/2022: Modified.
+# 08/22/2022: Previously modified.
+# 08/22/2022: Created.
 # Description: 
 #   - Test program.
 # Modifications:
@@ -14,6 +14,10 @@
 # Load modules.
 import sys                      # For system functions.
 import util                     # Custom utility functions.
+import os                       # For operating system functions.
+import numpy as np              # For numerical operations.
+from sklearn.linear_model import ElasticNetCV
+from sklearn.datasets import make_regression
 
 # Get current program name.
 progname=sys.argv[0].split('.')[0]
@@ -31,13 +35,39 @@ for pkey,pval in params.items():
   print(pkey,": ",pval,sep="")
 
 #-------------------------------
-# DO SOMETHING HERE
+# RUN MODEL
 #===============================
 
 # Display message.
 print('\n*****')
-print('***** DO SOMETHING HERE')
+print('***** RUN MODEL')
 print('*****')
+sys.stdout.flush()
+
+# Generate variables.
+X,y=make_regression(\
+                    n_samples=params['n_samples'],\
+                    n_features=params['n_features'],\
+                    random_state=params['random_state'])
+# Describe values.
+print('\nOutcome dimensions:',y.shape)
+print('Input dimensions:',X.shape)
+
+# Define model object.
+reg=ElasticNetCV(\
+                 l1_ratio=params['l1_ratio'],\
+                 cv=params['cv'],\
+                 verbose=params['verbose'],\
+                 n_jobs=params['n_jobs'],\
+                 random_state=params['random_state'])
+# Show input parameters.
+print('\nModel parameters:')
+print(reg.get_params(deep=False))
+print('')
+sys.stdout.flush()
+
+# Fit model.
+reg.fit(X,y)
 
 #-------------------------------
 # WRAP-UP

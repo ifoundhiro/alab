@@ -1,0 +1,53 @@
+***************************
+***** Job Information *****
+***************************
+***** Datetime:          2022-08-22 12:21:49
+***** LSF batch job ID:  43814614
+***** Number of core(s): 5
+***** User:              hmiura
+***** Environment:       /home/hmiura/anaconda3/envs/testpyenv
+***** Platform:          Linux-3.10.0-1062.el7.x86_64-x86_64-with-glibc2.17
+***** Software version:  3.10.4
+***** Hostname:          node1326
+***** Working directory: /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code
+***** Program name:      test2b1b1
+***** CPU model name:
+model name	: AMD EPYC 7352 24-Core Processor
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+***** Evaluate input parameters
+test: 0
+n_samples: 100000
+n_features: 500
+l1_ratio: 0
+cv: 10
+verbose: 1
+n_jobs: -2
+random_state: 12345
+adj: 100
+
+*****
+***** RUN MODEL
+*****
+
+Outcome dimensions: (100000,)
+Input dimensions: (100000, 500)
+
+Model parameters:
+{'alphas': None, 'copy_X': True, 'cv': 10, 'eps': 0.001, 'fit_intercept': True, 'l1_ratio': 0.0, 'max_iter': 1000, 'n_alphas': 100, 'n_jobs': -2, 'normalize': 'deprecated', 'positive': False, 'precompute': 'auto', 'random_state': 12345, 'selection': 'cyclic', 'tol': 0.0001, 'verbose': 1}
+
+Traceback (most recent call last):
+  File "/home/hmiura/hiro/03_Class/05_2022_Fall/alab/code/test2b1b1.py", line 73, in <module>
+    reg.fit(X,y)
+  File "/home/hmiura/anaconda3/envs/testpyenv/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py", line 1665, in fit
+    alphas = [
+  File "/home/hmiura/anaconda3/envs/testpyenv/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py", line 1666, in <listcomp>
+    _alpha_grid(
+  File "/home/hmiura/anaconda3/envs/testpyenv/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py", line 143, in _alpha_grid
+    raise ValueError(
+ValueError: Automatic alpha grid generation is not supported for l1_ratio=0. Please supply a grid by providing your estimator with the appropriate `alphas=` argument.
