@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -a 100
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=11
 #SBATCH --mem-per-cpu=1G
-#SBATCH --partition=sched_mit_sloan_interactive
+#SBATCH --partition=sched_mit_sloan_batch
 #SBATCH --time=0-01:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=hmiura@mit.edu
@@ -16,20 +16,18 @@ version="a1"
 source activate testrenv
 
 # Set input parameters.
-params='list(
-"test"=0,
-"n_samples"=100000,
-"n_features"=1000,
-"l1_ratio"=100,
-"cv"=10,
-"verbose"=1,
-"n_jobs"=-2,
-"random_state"=12345,
-"adj"=100,
-"sparse"=TRUE,
-"y_rnorm_mult"=50,
-"trace.it"=1
-)'
+params="list(
+'test'=0,
+'n_samples'=100000,
+'n_features'=1000,
+'alpha'=${SLURM_ARRAY_TASK_ID},
+'nfolds'=10,
+'seed'=12345,
+'adj'=100,
+'sparse'=TRUE,
+'y_rnorm_mult'=50,
+'trace.it'=1
+)"
 
 # Create output folder for logs.
 newlogpath="../output/logs/${program}${version}/${SLURM_ARRAY_JOB_ID}"
