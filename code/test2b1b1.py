@@ -3,15 +3,18 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/22/2022: Modified.
+# 08/23/2022: Modified.
 # 08/22/2022: Previously modified.
 # 08/22/2022: Created.
 # Description: 
-#   - Test program.
+#   - Test program for multi-core array parallelization.
 # Modifications:
 #   08/22/2022:
 #     - Duplicated from test2b1a1.py.
 #     - For testing different L1 ratios.
+#   08/23/2022:
+#     - Update program notes.
+#     - Adjust syntax formatting.
 ##########################################################################
 
 # Load modules.
@@ -38,31 +41,31 @@ for pkey,pval in params.items():
   print(pkey,": ",pval,sep="")
 
 #-------------------------------
-# RUN MODEL
+# BUILD AND RUN MODEL
 #===============================
 
 # Display message.
 print('\n*****')
-print('***** RUN MODEL')
+print('***** BUILD AND RUN MODEL')
 print('*****')
 sys.stdout.flush()
 
 # Generate variables.
 X,y=make_regression(\
-                    n_samples=params['n_samples'],\
-                    n_features=params['n_features'],\
-                    random_state=params['random_state'])
+  n_samples=params['n_samples'],\
+  n_features=params['n_features'],\
+  random_state=params['random_state'])
 # Describe values.
 print('\nOutcome dimensions:',y.shape)
 print('Input dimensions:',X.shape)
 
 # Define model object.
 reg=ElasticNetCV(\
-                 l1_ratio=params['l1_ratio']/params['adj'],\
-                 cv=params['cv'],\
-                 verbose=params['verbose'],\
-                 n_jobs=params['n_jobs'],\
-                 random_state=params['random_state'])
+  l1_ratio=params['l1_ratio']/params['adj'],\
+  cv=params['cv'],\
+  verbose=params['verbose'],\
+  n_jobs=params['n_jobs'],\
+  random_state=params['random_state'])
 # Show input parameters.
 print('\nModel parameters:')
 print(reg.get_params(deep=False))

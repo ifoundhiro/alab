@@ -3,8 +3,8 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=11
 #SBATCH --mem-per-cpu=1G
-#SBATCH --partition=sched_mit_sloan_interactive
-#SBATCH --time=0-01:00
+#SBATCH --partition=sched_mit_sloan_batch
+#SBATCH --time=0-00:10
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=hmiura@mit.edu
 #SBATCH --output=/dev/null
@@ -20,7 +20,7 @@ source activate testpyenv
 params="{
 'test':0,
 'n_samples':100000,
-'n_features':500,
+'n_features':1000,
 'l1_ratio':1,
 'cv':10,
 'verbose':1,
