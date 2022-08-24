@@ -1,6 +1,8 @@
 data/
 output/raw/
 output/derived/
+output/logs/test2a1
+output/logs/test2b1b1
 temp/
 test/
 archive/
