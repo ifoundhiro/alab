@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -a 100
-#SBATCH --cpus-per-task=5
+#SBATCH --cpus-per-task=11
 #SBATCH --mem-per-cpu=1G
 #SBATCH --partition=sched_mit_sloan_batch
 #SBATCH --time=0-01:00
@@ -26,7 +26,8 @@ params="list(
 'adj'=100,
 'sparse'=TRUE,
 'y_rnorm_mult'=50,
-'trace.it'=1
+'trace.it'=1,
+'nrounds'=10
 )"
 
 # Create output folder for logs.

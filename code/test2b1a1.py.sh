@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=11
 #SBATCH --mem-per-cpu=1G
 #SBATCH --partition=sched_mit_sloan_batch
-#SBATCH --time=0-00:10
+#SBATCH --time=0-01:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=hmiura@mit.edu
 #SBATCH --output=/dev/null
@@ -25,7 +25,8 @@ params="{
 'cv':10,
 'verbose':1,
 'n_jobs':-2,
-'random_state':12345
+'random_state':12345,
+'nrounds':10
 }"
 
 # Execute script.

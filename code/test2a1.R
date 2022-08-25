@@ -3,12 +3,15 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/23/2022: Modified.
+# 08/25/2022: Modified.
 # 08/23/2022: Previously modified.
 # 08/23/2022: Created.
 # Description: 
 #   - Test program.
 # Modifications:
+#   08/25/2022:
+#     - Set logic to stop cluster to avoid error message.
+#     - Insert logic to run model multiple times.
 ##########################################################################
 
 #########
@@ -30,7 +33,7 @@ jobinfo(program=program,progver=progver)
 library(doParallel)         # For parallel processing.
 library(Matrix)             # For sparse matrix.
 library(glmnet)             # For generalized linear models.
-#library(zip)                # For zip operations.
+library(data.table)         # For data table.
 # Load user defined module for utility functions.
 source("util.R")
 # Get input parameters.
@@ -116,25 +119,43 @@ foldid <- sample(params[["nfolds"]],length(y),replace=TRUE)
 # Show fold IDs.
 cat("\n***** Fold IDs:\n")
 print(table(foldid))
-# Start timing execution.
-cvglmnet_start <- proc.time()
-# Run model.
-cvfit <- cv.glmnet(
-  x=X,
-  y=y,
-  nfolds=params[["nfolds"]],
-  foldid=foldid,
-  parallel=params[["parallel"]],
-  trace.it=params[["trace.it"]],
-  alpha=params[["alpha"]]/params[["adj"]])
-# Stop timing execution.
-fit_time  <- proc.time() - cvglmnet_start
-# Show elapsed time.
-cat("\n***** Elapsed time in seconds:\n")
-print(fit_time)
+# Initialize container.
+dt_fit_time <- data.table()
+# Loop over specified number of times.
+for(i in 1:params[["nrounds"]]){
+  # Show status.
+  cat("\n\n***** Round:",i,"\n")
+  # Start timing execution.
+  cvglmnet_start <- proc.time()
+  # Run model.
+  cvfit <- cv.glmnet(
+    x=X,
+    y=y,
+    nfolds=params[["nfolds"]],
+    foldid=foldid,
+    parallel=params[["parallel"]],
+    trace.it=params[["trace.it"]],
+    alpha=params[["alpha"]]/params[["adj"]])
+  # Stop timing execution.
+  fit_time  <- proc.time() - cvglmnet_start
+  # Show elapsed time.
+  cat("\n***** Elapsed time in seconds:\n")
+  print(fit_time)
+  # Store elapsed time.
+  dt_fit_time <- 
+  rbind(dt_fit_time,data.table("round"=i,"nseconds"=fit_time[["elapsed"]]))
+}
+# Show elapsed times.
+cat("\n\n***** Elapsed time in seconds:\n")
+print(dt_fit_time)
+print(summary(dt_fit_time[["nseconds"]]))
 
 ###########
 # Wrap-up #
 ###########
+# Stop parallel processing.
+if(ncores>1){
+  stopCluster(cl)
+}
 # Display job information.
 jobinfo(program=program,progver=progver,disp_pack=1)

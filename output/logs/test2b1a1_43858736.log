@@ -1,0 +1,49 @@
+***************************
+***** Job Information *****
+***************************
+***** Datetime:          2022-08-25 16:48:50
+***** LSF batch job ID:  43858736
+***** Number of core(s): 2
+***** User:              hmiura
+***** Environment:       /home/hmiura/anaconda3/envs/testpyenv
+***** Platform:          Linux-3.10.0-1062.el7.x86_64-x86_64-with-glibc2.17
+***** Software version:  3.10.4
+***** Hostname:          node1331
+***** Working directory: /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code
+***** Program name:      test2b1a1
+***** CPU model name:
+model name	: AMD EPYC 7352 24-Core Processor
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+***** Evaluate input parameters
+test: 0
+n_samples: 100000
+n_features: 1000
+l1_ratio: 1
+cv: 10
+verbose: 1
+n_jobs: -2
+random_state: 12345
+nrounds: 10
+
+*****
+***** BUILD AND RUN MODEL
+*****
+***** Prepate data and model
+
+Outcome dimensions: (100000,)
+Input dimensions: (100000, 1000)
+
+Model parameters:
+{'alphas': None, 'copy_X': True, 'cv': 10, 'eps': 0.001, 'fit_intercept': True, 'l1_ratio': 1, 'max_iter': 1000, 'n_alphas': 100, 'n_jobs': -2, 'normalize': 'deprecated', 'positive': False, 'precompute': 'auto', 'random_state': 12345, 'selection': 'cyclic', 'tol': 0.0001, 'verbose': 1}
+
+***** Run model
+Traceback (most recent call last):
+  File "/home/hmiura/hiro/03_Class/05_2022_Fall/alab/code/test2b1a1.py", line 81, in <module>
+    df_fit_time=pd.DataFrame()
+NameError: name 'pd' is not defined. Did you mean: 'id'?

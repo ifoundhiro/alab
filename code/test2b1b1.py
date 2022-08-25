@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/23/2022: Modified.
-# 08/22/2022: Previously modified.
+# 08/25/2022: Modified.
+# 08/23/2022: Previously modified.
 # 08/22/2022: Created.
 # Description: 
 #   - Test program for multi-core array parallelization.
@@ -15,6 +15,8 @@
 #   08/23/2022:
 #     - Update program notes.
 #     - Adjust syntax formatting.
+#   08/25/2022:
+#     - Insert module notes.
 ##########################################################################
 
 # Load modules.
@@ -22,8 +24,8 @@ import sys                      # For system functions.
 import util                     # Custom utility functions.
 import os                       # For operating system functions.
 import numpy as np              # For numerical operations.
-from sklearn.linear_model import ElasticNetCV
-from sklearn.datasets import make_regression
+from sklearn.linear_model import ElasticNetCV # For elastic net CV.
+from sklearn.datasets import make_regression  # For building models.
 
 # Get current program name.
 progname=sys.argv[0].split('.')[0]
