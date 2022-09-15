@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/25/2022: Modified.
-# 08/23/2022: Previously modified.
+# 09/15/2022: Modified.
+# 08/25/2022: Previously modified.
 # 08/23/2022: Created.
 # Description: 
 #   - Test program.
@@ -12,6 +12,10 @@
 #   08/25/2022:
 #     - Set logic to stop cluster to avoid error message.
 #     - Insert logic to run model multiple times.
+#   09/15/2022:
+#     - Replace data build with pre-built test data.
+#     - Specify grid values for shrinkage parameter.
+#     - Set seed before generating fold IDs.
 ##########################################################################
 
 #########
@@ -89,33 +93,53 @@ cat("\n***** Input parameters:\n")
 print(params)
 
 #-------------------------------
-# BUILD AND RUN MODEL
+# LOAD DATA
 #===============================
 
 # Display section title.
 cat("\n\n*****")
-cat("\n***** BUILD AND RUN MODEL")
+cat("\n***** LOAD DATA")
 cat("\n*****")
 
-#---- Prepare data ----#
-cat("\n***** Prepare data")
-# Set random seed.
-set.seed(params[["seed"]])
-# Set outcomes.
-y <- Matrix(matrix(rnorm(params[["n_samples"]])*params[["y_rnorm_mult"]],
-ncol=1),sparse=params[["sparse"]])
-# Set features.
-X <- Matrix(matrix(rnorm(params[["n_samples"]]*params[["n_features"]]),
-ncol=params[["n_features"]]),sparse=params[["sparse"]])
-# Show data dimensions.
-cat("\n***** Data dimensions")
-cat("\n***** Outcome: ",dim(y))
-cat("\n***** Input:   ",dim(X))
+#---- Load outcome data ----#
+cat("\n***** Load outcome data")
+# Load data.
+y <- fread(paste0("unzip -p ",drvdatapath,params[["outcome_data"]]))
+# Show data properties.
+cat("\n***** Data dimensions:\n")
+print(dim(y))
+cat("\n***** Data types:\n")
+print(str(y))
+cat("\n***** Missing columns:\n")
+print(colSums(is.na(y)))
+
+#---- Load input data ----#
+cat("\n***** Load input data")
+# Load data.
+X <- fread(paste0("unzip -p ",drvdatapath,params[["input_data"]]))
+# Show data properties.
+cat("\n***** Data dimensions:\n")
+print(dim(X))
+cat("\n***** Sample data types:\n")
+print(str(X))
+cat("\n***** Sample missing columns:\n")
+print(colSums(is.na(X[,1:50])))
+
+#-------------------------------
+# RUN MODEL
+#===============================
+
+# Display section title.
+cat("\n\n*****")
+cat("\n***** RUN MODEL")
+cat("\n*****")
 
 #---- Run model ----#
 cat("\n***** Run model")
+# Set seed.
+set.seed(params[["seed"]])
 # Set fold IDs.
-foldid <- sample(params[["nfolds"]],length(y),replace=TRUE)
+foldid <- sample(params[["nfolds"]],nrow(y),replace=TRUE)
 # Show fold IDs.
 cat("\n***** Fold IDs:\n")
 print(table(foldid))
@@ -129,13 +153,14 @@ for(i in 1:params[["nrounds"]]){
   cvglmnet_start <- proc.time()
   # Run model.
   cvfit <- cv.glmnet(
-    x=X,
-    y=y,
+    x=Matrix(as.matrix(X),sparse=params[["sparse"]]),
+    y=Matrix(as.matrix(y),sparse=params[["sparse"]]),
     nfolds=params[["nfolds"]],
     foldid=foldid,
     parallel=params[["parallel"]],
     trace.it=params[["trace.it"]],
-    alpha=params[["alpha"]]/params[["adj"]])
+    alpha=params[["alpha"]]/params[["adj"]],
+    lambda=params[["lambdas"]])
   # Stop timing execution.
   fit_time  <- proc.time() - cvglmnet_start
   # Show elapsed time.

@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/25/2022: Modified.
-# 08/23/2022: Previously modified.
+# 09/15/2022: Modified.
+# 08/25/2022: Previously modified.
 # 08/22/2022: Created.
 # Description: 
 #   - Test program for multi-core parallelization.
@@ -15,6 +15,9 @@
 #   08/25/2022:
 #     - Insert module notes.
 #     - Insert logic to run model multiple times.
+#   09/15/2022:
+#     - Replace data build with pre-built test data.
+#     - Specify grid values for shrinkage parameter.
 ##########################################################################
 
 # Load modules.
@@ -44,32 +47,49 @@ for pkey,pval in params.items():
   print(pkey,": ",pval,sep="")
 
 #-------------------------------
-# BUILD AND RUN MODEL
+# LOAD DATA
 #===============================
 
 # Display message.
 print('\n*****')
-print('***** BUILD AND RUN MODEL')
+print('***** LOAD DATA')
 print('*****')
 sys.stdout.flush()
 
-#---- Prepate data and model ----#
-print('***** Prepate data and model')
-# Generate variables.
-X,y=make_regression(\
-  n_samples=params['n_samples'],\
-  n_features=params['n_features'],\
-  random_state=params['random_state'])
-# Describe values.
-print('\nOutcome dimensions:',y.shape)
-print('Input dimensions:',X.shape)
+#---- Load outcome data ----#
+print('***** Load outcome data')
+# Set filename to retrieve.
+filename=util.drvdatapath+params['outcome_data']
+# Fetch data.
+y=util.fetch(file=filename,keep_varlist=[])
+
+#---- Load input data ----#
+print('***** Load input data')
+# Set filename to retrieve.
+filename=util.drvdatapath+params['input_data']
+# Fetch data.
+X=util.fetch(file=filename,keep_varlist=[],showtype=0,showmiss=0)
+
+#-------------------------------
+# RUN MODEL
+#===============================
+
+# Display message.
+print('\n*****')
+print('***** RUN MODEL')
+print('*****')
+sys.stdout.flush()
+
+#---- Prepare model ----#
+print('***** Prepare model')
 # Define model object.
 reg=ElasticNetCV(\
   l1_ratio=params['l1_ratio'],\
   cv=params['cv'],\
   verbose=params['verbose'],\
   n_jobs=params['n_jobs'],\
-  random_state=params['random_state'])
+  random_state=params['random_state'],
+  alphas=params['alphas'])
 # Show input parameters.
 print('\nModel parameters:')
 print(reg.get_params(deep=False))
@@ -89,7 +109,7 @@ for i in range(0,params['nrounds']):
   # Start timer.
   start_time=time.monotonic()
   # Fit model.
-  reg.fit(X,y)
+  reg.fit(X,y.values.ravel())
   # End timer.
   end_time=time.monotonic()
   # Record elapsed time.
