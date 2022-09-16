@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -a 100
+#SBATCH -a 1-100
 #SBATCH --cpus-per-task=6
 #SBATCH --mem-per-cpu=1G
 #SBATCH --partition=sched_mit_sloan_batch
@@ -35,4 +35,4 @@ mkdir -p ${newlogpath}
 # Execute script.
 python ${program}${version}.py \
 "${params}" \
-> ${newlogpath}/${program}${version}_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}.log 2>&1
+> ${newlogpath}/${program}${version}_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.log 2>&1
