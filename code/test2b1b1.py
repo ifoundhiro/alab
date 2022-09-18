@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 09/16/2022: Modified.
-# 09/15/2022: Previously modified.
+# 09/18/2022: Modified.
+# 09/16/2022: Previously modified.
 # 08/22/2022: Created.
 # Description: 
 #   - Test program for multi-core array parallelization.
@@ -22,6 +22,8 @@
 #     - Specify grid values for shrinkage parameter.
 #   09/16/2022:
 #     - Insert logic to save results to file.
+#   09/18/2022:
+#     - Correct 'mes' to 'mse' for mean squared error.
 ##########################################################################
 
 # Load modules.
@@ -116,7 +118,7 @@ df_res=pd.DataFrame({\
 'input_params':[params],\
 'model_params':[reg.get_params(deep=False)],\
 'alpha_':[reg.alpha_],\
-'mes':[np.mean((y.values.ravel()-reg.predict(X))**2)],\
+'mse':[np.mean((y.values.ravel()-reg.predict(X))**2)],\
 'nonzerovars':\
 [[X.columns[x] for x in range(0,len(X.columns)) if reg.coef_[x]!=0]],\
 'nonzerocoefs':[[x for x in reg.coef_ if x!=0]]})

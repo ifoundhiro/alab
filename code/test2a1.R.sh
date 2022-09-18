@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -a 100
-#SBATCH --cpus-per-task=11
+#SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=1G
 #SBATCH --partition=sched_mit_sloan_batch
 #SBATCH --time=0-02:00

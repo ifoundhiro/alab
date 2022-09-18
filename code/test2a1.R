@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 09/16/2022: Modified.
-# 09/15/2022: Previously modified.
+# 09/15/2022: Modified.
+# 08/25/2022: Previously modified.
 # 08/23/2022: Created.
 # Description: 
 #   - Test program.
@@ -16,9 +16,6 @@
 #     - Replace data build with pre-built test data.
 #     - Specify grid values for shrinkage parameter.
 #     - Set seed before generating fold IDs.
-#   09/16/2022:
-#     - Generate input matrices before main loop.
-#     - Adjust parallelization setup.
 ##########################################################################
 
 #########
@@ -56,32 +53,39 @@ cat("\n***** SET PARALLELIZATION SETTINGS")
 cat("\n*****")
 
 #---- Setup parallel processing ----#
-cat("\n*****Setup parallel processing")
+print('*****Setup parallel processing')
 # Get number of cores.
 ncores  <- as.numeric(Sys.getenv("SLURM_JOB_CPUS_PER_NODE"))
-# Set number of workers.
-nworkers <- ncores-1
+# Evaluate if one core detected.
+if(ncores==1){
+  # Set number of workers to 0.
+  nworkers <- 0
+  # Set parallel option off.
+  params[["parallel"]] <- FALSE
+} else{  # Evaluate if more than one core detected.
+  # Set number of workers equal to number of cores minus one.
+  nworkers <- ncores-1
+  # Set parallel option on.
+  params[["parallel"]] <- TRUE
+}
 # Show settings.
 cat("\n***** Number of cores:   ",ncores)
 cat("\n***** Number of workers: ",nworkers)
+cat("\n***** Parallel option:   ",params[["parallel"]])
 cat("\n")
-# Evaluate if more than one worker.
-if(nworkers>1){
+# Evaluate if more than one core.
+if(ncores>1){
   # Set cluster.
   cl      <- makeCluster(nworkers,outfile="")
   # Initialize cluster.
   registerDoParallel(cl)
-  # Set parallel option on.
-  params[["parallel"]] <- TRUE
   # Show status.
-  cat("\n***** Parallel setting")
+  cat("\n***** Multi-core setting")
   cat("\n***** Estimation parallel option:",params[["parallel"]],"\n")
   print(cl)
 } else{ # Evaluate if no parallelization.
-  # Set parallel option off.
-  params[["parallel"]] <- FALSE
   # Show status.
-  cat("\n***** Sequential setting")
+  cat("\n***** Single-core setting")
   cat("\n***** Estimation parallel option:",params[["parallel"]],"\n")
 }
 # Show input parameters.
@@ -141,9 +145,6 @@ cat("\n***** Fold IDs:\n")
 print(table(foldid))
 # Initialize container.
 dt_fit_time <- data.table()
-# Generate matrices.
-my <- as.matrix(y)
-mX <- Matrix(as.matrix(X),sparse=params[["sparse"]])
 # Loop over specified number of times.
 for(i in 1:params[["nrounds"]]){
   # Show status.
@@ -152,8 +153,8 @@ for(i in 1:params[["nrounds"]]){
   cvglmnet_start <- proc.time()
   # Run model.
   cvfit <- cv.glmnet(
-    x=mX,
-    y=my,
+    x=Matrix(as.matrix(X),sparse=params[["sparse"]]),
+    y=Matrix(as.matrix(y),sparse=params[["sparse"]]),
     nfolds=params[["nfolds"]],
     foldid=foldid,
     parallel=params[["parallel"]],
@@ -178,7 +179,7 @@ print(summary(dt_fit_time[["nseconds"]]))
 # Wrap-up #
 ###########
 # Stop parallel processing.
-if(nworkers>1){
+if(ncores>1){
   stopCluster(cl)
 }
 # Display job information.

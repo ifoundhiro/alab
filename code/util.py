@@ -3,7 +3,7 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 08/09/2022: Modified.
+# 09/18/2022: Modified.
 # 08/09/2022: Previously modified.
 # 08/09/2022: Created.
 # Description: 
@@ -14,6 +14,9 @@
 #   08/09/2022:
 #     - Duplicated from util.py in 
 #       /nfs/sloanlab003/projects/malonephi1_proj/hiro/phi2/code.
+#   09/18/2022:
+#     - Change number of cores multiple from 1.5 to 1.0 in 
+#       parstore() and parfetch().
 ##########################################################################
 
 # Import modules.
@@ -231,7 +234,7 @@ def parstore(
   showtype=1,           # Whether to display data types or not.
   showmiss=1,           # Whether to display missing values or not.
   chunksize=10,         # Optional chunk size.
-  ncore_mult=1.5        # Number of cores multiplier.
+  ncore_mult=1.0        # Number of cores multiplier.
 ):
   
   #-------------------------------
@@ -483,7 +486,7 @@ def parfetch(
   showtype=1,           # Whether to display data types or not.
   showmiss=1,           # Whether to display missing values or not.
   chunksize=10,           # Optional chunk size for parallelization.
-  ncore_mult=1.5          # Number of cores multiplier.
+  ncore_mult=1.0          # Number of cores multiplier.
 ):
   
   #-------------------------------
