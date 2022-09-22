@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 09/15/2022: Modified.
-# 08/25/2022: Previously modified.
+# 09/22/2022: Modified.
+# 09/15/2022: Previously modified.
 # 08/23/2022: Created.
 # Description: 
 #   - Test program.
@@ -16,6 +16,8 @@
 #     - Replace data build with pre-built test data.
 #     - Specify grid values for shrinkage parameter.
 #     - Set seed before generating fold IDs.
+#   09/22/2022:
+#     - Set logic to capture estimation results.
 ##########################################################################
 
 #########
@@ -38,6 +40,7 @@ library(doParallel)         # For parallel processing.
 library(Matrix)             # For sparse matrix.
 library(glmnet)             # For generalized linear models.
 library(data.table)         # For data table.
+library(zip)                # For zip operations.
 # Load user defined module for utility functions.
 source("util.R")
 # Get input parameters.
@@ -145,6 +148,8 @@ cat("\n***** Fold IDs:\n")
 print(table(foldid))
 # Initialize container.
 dt_fit_time <- data.table()
+# Initialize results container.
+res <- list()
 # Loop over specified number of times.
 for(i in 1:params[["nrounds"]]){
   # Show status.
@@ -169,11 +174,58 @@ for(i in 1:params[["nrounds"]]){
   # Store elapsed time.
   dt_fit_time <- 
   rbind(dt_fit_time,data.table("round"=i,"nseconds"=fit_time[["elapsed"]]))
+  # Get coefficient information.
+  fit_coeffs          <- coef(cvfit,s=cvfit[["lambda.min"]])
+  fit_coeffs_nonzero  <- fit_coeffs[fit_coeffs[,1]!=0,]
+  # Store results.
+  res[[i]] <- list(
+    "lambda_min"=cvfit[["lambda.min"]],
+    "mse"=mean((as.matrix(y)-predict(cvfit,newx=Matrix(as.matrix(X),
+    sparse=TRUE),s=cvfit[["lambda.min"]]))^2),
+    "nonzero_coeffs"=fit_coeffs_nonzero
+  )
 }
 # Show elapsed times.
 cat("\n\n***** Elapsed time in seconds:\n")
 print(dt_fit_time)
 print(summary(dt_fit_time[["nseconds"]]))
+
+#-------------------------------
+# SAVE ESTIMATION RESULTS
+#===============================
+
+# Display section title.
+cat("\n\n*****")
+cat("\n***** SAVE ESTIMATION RESULTS")
+cat("\n*****")
+
+#---- Save specified objects ----#
+print("***** Save specified objects")
+# Set target directory.
+targetpath <- paste0(rawoutpath,program,progver,.Platform$file.sep,
+Sys.getenv("SLURM_ARRAY_JOB_ID"),.Platform$file.sep)
+# Generate target directory.
+#dir.create(targetpath,recursive=TRUE)
+# Set output filename.
+#outfile <- paste0(normalizePath(rawoutpath),.Platform$file.sep,
+outfile <- paste0(targetpath,
+program,progver,"_",
+Sys.getenv("SLURM_ARRAY_JOB_ID"),"_",
+Sys.getenv("SLURM_ARRAY_TASK_ID"),".Rdata")
+# Set zip filename.
+outfilezip=paste0(outfile,".zip")
+# Save data.
+save(params,res,file=outfile)
+# Show results.
+cat("\n***** File saved:",outfile)
+# Zip data.
+zip(zipfile=outfilezip,files=outfile)
+# Show results.
+cat("\n***** File zipped:",outfilezip)
+# Delete unzipped file.
+unlink(outfile)
+# Show results.
+cat("\n***** Unzipped file deleted:",outfile)
 
 ###########
 # Wrap-up #

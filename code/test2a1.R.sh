@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -a 100
-#SBATCH --cpus-per-task=4
+#SBATCH -a 1-100
+#SBATCH --cpus-per-task=6
 #SBATCH --mem-per-cpu=1G
 #SBATCH --partition=sched_mit_sloan_batch
 #SBATCH --time=0-02:00
@@ -23,9 +23,8 @@ params="list(
 'seed'=12345,
 'adj'=100,
 'sparse'=TRUE,
-'y_rnorm_mult'=50,
 'trace.it'=1,
-'nrounds'=10,
+'nrounds'=1,
 'lambdas'=1.1^seq(-50,49,by=1),
 'outcome_data'='test2a0_outcome.csv.zip',
 'input_data'='test2a0_input.csv.zip'
@@ -34,7 +33,10 @@ params="list(
 # Create output folder for logs.
 newlogpath="../output/logs/${program}${version}/${SLURM_ARRAY_JOB_ID}"
 mkdir -p ${newlogpath}
+# Create output folder for results.
+newrawoutpath="../output/raw/${program}${version}/${SLURM_ARRAY_JOB_ID}"
+mkdir -p ${newrawoutpath}
 # Execute script.
 Rscript --verbose ${program}${version}.R \
 ${program} ${version} "${params}" \
-> ${newlogpath}/${program}${version}_${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID}.log 2>&1
+> ${newlogpath}/${program}${version}_${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}.log 2>&1

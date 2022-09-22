@@ -1,0 +1,4 @@
+  File "/home/hmiura/hiro/03_Class/05_2022_Fall/alab/code/test2b1b2.py", line 123
+    #'File '+outfile[:int(len(outfile)/2)]+\
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax

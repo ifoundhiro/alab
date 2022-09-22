@@ -1,0 +1,5155 @@
+***************************
+***** Job Information *****
+***************************
+***** Datetime:          2022-09-22 09:58:39
+***** LSF batch job ID:  44180023
+***** Number of core(s): 10
+***** User:              hmiura
+***** Environment:       /home/hmiura/anaconda3/envs/testpyenv
+***** Platform:          Linux-3.10.0-1062.el7.x86_64-x86_64-with-glibc2.17
+***** Software version:  3.10.4
+***** Hostname:          node101
+***** Working directory: /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code
+***** Program name:      test2b1b2
+***** CPU model name:
+model name	: Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+***** Evaluate input parameters
+test: 0
+sourcedir: test2b1b1/44137284
+xvar: l1_ratio
+yvar: mse
+fontsize_notes: 10
+fontsize_overall: 14
+fontsize_subtitle: 14
+fontsize_title: 16
+plot_title: Python Elastic Net Model
+yaxis_title: Mean Squared Error
+xaxis_title: Mixing Parameter
+linewidth: 1.5
+figheight: 6
+figwidth: 9
+
+*****
+***** LOAD DATA
+*****
+***** Load estimation results
+***** # of files to load: 100
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_20.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_3.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_7.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_6.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_9.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_11.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_2.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_5.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_1.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_4.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_10.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_8.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_17.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_13.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_25.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_15.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_12.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_21.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_14.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_19.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_18.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_16.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_22.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_23.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_44.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_28.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_24.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_27.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_31.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_26.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_30.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_33.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_29.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_32.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_35.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_36.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_40.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_39.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_38.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_41.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_37.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_43.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_82.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_42.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_45.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_34.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_46.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_47.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_49.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_50.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_52.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_51.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_48.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_54.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_53.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_55.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_56.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_57.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_59.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_61.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_62.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_60.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_58.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_64.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_63.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_66.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_65.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_67.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_68.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_72.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_71.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_70.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_73.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_74.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_75.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_76.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_77.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_78.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_79.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_80.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_69.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_93.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_81.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_83.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_84.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_85.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_86.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_88.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_87.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_89.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_90.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_91.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_92.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_96.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_94.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_95.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_97.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_98.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_99.pickle.zip
+../output/raw/test2b1b1/44137284/test2b1b1_44137284_100.pickle.zip
+
+*****
+***** Function to fetch data in parallel
+*****
+***** Input parameters
+***** List size:                          100
+***** List of variable(s) to keep:        []
+***** Optional use of default NA values:  False
+***** Optional NA value(s):               ['']
+***** Show data types or not:             1
+***** Show missing or not:                1
+***** Chunk size:                         10
+***** Number of cores multiplier:         1.0
+***** Number of workers:                  9
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_10.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_10.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 10, 'cv': 10, 'verbose...  ...  [0.4869464400575493, -0.027599329857974402, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 10, 'cv': 10, 'verbose...  ...  [0.4869464400575493, -0.027599329857974402, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_37.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_37.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 37, 'cv': 10, 'verbose...  ...  [0.480406341963923, -0.015164195706612755, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 37, 'cv': 10, 'verbose...  ...  [0.480406341963923, -0.015164195706612755, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_69.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_69.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 69, 'cv': 10, 'verbose...  ...  [0.4528855295638198, 0.6035498090820569, 0.363...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 69, 'cv': 10, 'verbose...  ...  [0.4528855295638198, 0.6035498090820569, 0.363...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_62.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_62.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 62, 'cv': 10, 'verbose...  ...  [0.4694103159943561, 0.6246111618827457, 0.378...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 62, 'cv': 10, 'verbose...  ...  [0.4694103159943561, 0.6246111618827457, 0.378...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_71.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_71.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 71, 'cv': 10, 'verbose...  ...  [0.4424254822826323, 0.5895116833347239, 0.354...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 71, 'cv': 10, 'verbose...  ...  [0.4424254822826323, 0.5895116833347239, 0.354...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_18.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_18.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 18, 'cv': 10, 'verbose...  ...  [0.4850280545607636, -0.023958218470448333, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 18, 'cv': 10, 'verbose...  ...  [0.4850280545607636, -0.023958218470448333, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_20.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_20.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 20, 'cv': 10, 'verbose...  ...  [0.4845466493051625, -0.02304255769275668, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 20, 'cv': 10, 'verbose...  ...  [0.4845466493051625, -0.02304255769275668, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_52.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_52.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 52, 'cv': 10, 'verbose...  ...  [0.477000422810394, -0.007974006374257188, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 52, 'cv': 10, 'verbose...  ...  [0.477000422810394, -0.007974006374257188, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_30.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_30.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 30, 'cv': 10, 'verbose...  ...  [0.48211651965810404, -0.018417463452344046, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 30, 'cv': 10, 'verbose...  ...  [0.48211651965810404, -0.018417463452344046, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_8.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_8.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 8, 'cv': 10, 'verbose'...  ...  [0.48741280621079447, -0.02850517431848071, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 8, 'cv': 10, 'verbose'...  ...  [0.48741280621079447, -0.02850517431848071, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_16.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_16.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 16, 'cv': 10, 'verbose...  ...  [0.4855143291288462, -0.024872477233941395, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 16, 'cv': 10, 'verbose...  ...  [0.4855143291288462, -0.024872477233941395, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_51.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_51.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 51, 'cv': 10, 'verbose...  ...  [0.47724474404740896, -0.008447973846104002, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 51, 'cv': 10, 'verbose...  ...  [0.47724474404740896, -0.008447973846104002, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_3.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_3.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 3, 'cv': 10, 'verbose'...  ...  [0.48856646743430215, -0.03073226531435403, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 3, 'cv': 10, 'verbose'...  ...  [0.48856646743430215, -0.03073226531435403, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_70.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_70.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 70, 'cv': 10, 'verbose...  ...  [0.44790850528580595, 0.5968140507016201, 0.35...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 70, 'cv': 10, 'verbose...  ...  [0.44790850528580595, 0.5968140507016201, 0.35...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_43.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_43.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 43, 'cv': 10, 'verbose...  ...  [0.4789488594287754, -0.012361692662837409, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 43, 'cv': 10, 'verbose...  ...  [0.4789488594287754, -0.012361692662837409, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_33.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_33.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 33, 'cv': 10, 'verbose...  ...  [0.48137956643416313, -0.017023280706224903, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 33, 'cv': 10, 'verbose...  ...  [0.48137956643416313, -0.017023280706224903, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_60.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_60.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 60, 'cv': 10, 'verbose...  ...  [0.47263840102209453, -0.0026376838920581843, ...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 60, 'cv': 10, 'verbose...  ...  [0.47263840102209453, -0.0026376838920581843, ...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_17.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_17.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 17, 'cv': 10, 'verbose...  ...  [0.48527129849918954, -0.024415547361616684, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 17, 'cv': 10, 'verbose...  ...  [0.48527129849918954, -0.024415547361616684, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_22.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_22.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 22, 'cv': 10, 'verbose...  ...  [0.48406434427353906, -0.02212262019610622, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 22, 'cv': 10, 'verbose...  ...  [0.48406434427353906, -0.02212262019610622, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_7.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_7.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 7, 'cv': 10, 'verbose'...  ...  [0.4876446278785259, -0.028953127225411327, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 7, 'cv': 10, 'verbose'...  ...  [0.4876446278785259, -0.028953127225411327, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_93.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_93.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 93, 'cv': 10, 'verbose...  ...  [0.08026319123880786, 0.21704822307927996, 0.0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 93, 'cv': 10, 'verbose...  ...  [0.08026319123880786, 0.21704822307927996, 0.0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_82.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_82.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 82, 'cv': 10, 'verbose...  ...  [0.3653434454596106, 0.4999868792607116, 0.285...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 82, 'cv': 10, 'verbose...  ...  [0.3653434454596106, 0.4999868792607116, 0.285...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_73.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_73.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 73, 'cv': 10, 'verbose...  ...  [0.43575019400689025, 0.581901086236885, 0.348...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 73, 'cv': 10, 'verbose...  ...  [0.43575019400689025, 0.581901086236885, 0.348...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_48.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_48.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 48, 'cv': 10, 'verbose...  ...  [0.4777479199175894, -0.010012519705504595, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 48, 'cv': 10, 'verbose...  ...  [0.4777479199175894, -0.010012519705504595, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_29.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_29.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 29, 'cv': 10, 'verbose...  ...  [0.4823615397596418, -0.018881842325505244, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 29, 'cv': 10, 'verbose...  ...  [0.4823615397596418, -0.018881842325505244, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_58.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_58.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 58, 'cv': 10, 'verbose...  ...  [0.47552891249204937, -0.005129198447176389, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 58, 'cv': 10, 'verbose...  ...  [0.47552891249204937, -0.005129198447176389, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_13.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_13.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 13, 'cv': 10, 'verbose...  ...  [0.48623962965427564, -0.026240106627437705, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 13, 'cv': 10, 'verbose...  ...  [0.48623962965427564, -0.026240106627437705, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_23.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_23.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 23, 'cv': 10, 'verbose...  ...  [0.4838219766693656, -0.021661179565616844, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 23, 'cv': 10, 'verbose...  ...  [0.4838219766693656, -0.021661179565616844, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_74.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_74.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 74, 'cv': 10, 'verbose...  ...  [0.42894520586430107, 0.5732186578569711, 0.34...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 74, 'cv': 10, 'verbose...  ...  [0.42894520586430107, 0.5732186578569711, 0.34...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_42.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_42.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 42, 'cv': 10, 'verbose...  ...  [0.4791898968493074, -0.012830227031139467, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 42, 'cv': 10, 'verbose...  ...  [0.4791898968493074, -0.012830227031139467, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_64.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_64.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 64, 'cv': 10, 'verbose...  ...  [0.46258932482160997, 0.6146450218363108, 0.37...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 64, 'cv': 10, 'verbose...  ...  [0.46258932482160997, 0.6146450218363108, 0.37...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_54.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_54.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 54, 'cv': 10, 'verbose...  ...  [0.4765111754083652, -0.007024763182560244, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 54, 'cv': 10, 'verbose...  ...  [0.4765111754083652, -0.007024763182560244, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_32.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_32.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 32, 'cv': 10, 'verbose...  ...  [0.48162528317651204, -0.01748817581677339, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 32, 'cv': 10, 'verbose...  ...  [0.48162528317651204, -0.01748817581677339, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_81.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_81.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 81, 'cv': 10, 'verbose...  ...  [0.37880620304023277, 0.5152945122303253, 0.29...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 81, 'cv': 10, 'verbose...  ...  [0.37880620304023277, 0.5152945122303253, 0.29...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_6.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_6.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 6, 'cv': 10, 'verbose'...  ...  [0.48787577630773826, -0.029397723126486947, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 6, 'cv': 10, 'verbose'...  ...  [0.48787577630773826, -0.029397723126486947, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_44.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_44.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 44, 'cv': 10, 'verbose...  ...  [0.47870859714586145, -0.011892669065825381, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 44, 'cv': 10, 'verbose...  ...  [0.47870859714586145, -0.011892669065825381, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_45.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_45.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 45, 'cv': 10, 'verbose...  ...  [0.4784679072222389, -0.011423331296608491, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 45, 'cv': 10, 'verbose...  ...  [0.4784679072222389, -0.011423331296608491, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_75.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_75.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 75, 'cv': 10, 'verbose...  ...  [0.42827148369296375, 0.5735904936557702, 0.34...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 75, 'cv': 10, 'verbose...  ...  [0.42827148369296375, 0.5735904936557702, 0.34...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_25.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_25.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 25, 'cv': 10, 'verbose...  ...  [0.4833361647983266, -0.020736547456028508, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 25, 'cv': 10, 'verbose...  ...  [0.4833361647983266, -0.020736547456028508, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_53.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_53.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 53, 'cv': 10, 'verbose...  ...  [0.4767559013876076, -0.0074996029023102154, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 53, 'cv': 10, 'verbose...  ...  [0.4767559013876076, -0.0074996029023102154, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_63.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_63.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 63, 'cv': 10, 'verbose...  ...  [0.4661616164554599, 0.6198409549315865, 0.375...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 63, 'cv': 10, 'verbose...  ...  [0.4661616164554599, 0.6198409549315865, 0.375...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_35.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_35.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 35, 'cv': 10, 'verbose...  ...  [0.48089100663883294, -0.01609406961512877, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 35, 'cv': 10, 'verbose...  ...  [0.48089100663883294, -0.01609406961512877, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_9.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_9.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 9, 'cv': 10, 'verbose'...  ...  [0.4871797168832517, -0.0280525019514225, 0.62...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 9, 'cv': 10, 'verbose'...  ...  [0.4871797168832517, -0.0280525019514225, 0.62...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_83.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_83.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 83, 'cv': 10, 'verbose...  ...  [0.35052672785487815, 0.48354223200602153, 0.2...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 83, 'cv': 10, 'verbose...  ...  [0.35052672785487815, 0.48354223200602153, 0.2...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_28.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_28.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 28, 'cv': 10, 'verbose...  ...  [0.48260552555079295, -0.01934617042810904, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 28, 'cv': 10, 'verbose...  ...  [0.48260552555079295, -0.01934617042810904, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_76.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_76.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 76, 'cv': 10, 'verbose...  ...  [0.42069527782585864, 0.5640391614643191, 0.33...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 76, 'cv': 10, 'verbose...  ...  [0.42069527782585864, 0.5640391614643191, 0.33...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_34.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_34.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 34, 'cv': 10, 'verbose...  ...  [0.4811338632700197, -0.016558586025391397, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 34, 'cv': 10, 'verbose...  ...  [0.4811338632700197, -0.016558586025391397, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_15.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_15.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 15, 'cv': 10, 'verbose...  ...  [0.4857572034951937, -0.02532892961805099, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 15, 'cv': 10, 'verbose...  ...  [0.4857572034951937, -0.02532892961805099, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_36.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_36.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 36, 'cv': 10, 'verbose...  ...  [0.4806488814405604, -0.01562930994686889, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 36, 'cv': 10, 'verbose...  ...  [0.4806488814405604, -0.01562930994686889, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_66.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_66.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 66, 'cv': 10, 'verbose...  ...  [0.4582155524061183, 0.6092162778955638, 0.369...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 66, 'cv': 10, 'verbose...  ...  [0.4582155524061183, 0.6092162778955638, 0.369...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_55.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_55.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 55, 'cv': 10, 'verbose...  ...  [0.47626626801793515, -0.006549960855848628, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 55, 'cv': 10, 'verbose...  ...  [0.47626626801793515, -0.006549960855848628, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_11.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_11.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 11, 'cv': 10, 'verbose...  ...  [0.48671263532158526, -0.027146147962352398, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 11, 'cv': 10, 'verbose...  ...  [0.48671263532158526, -0.027146147962352398, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_84.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_84.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 84, 'cv': 10, 'verbose...  ...  [0.34903751113309245, 0.4840813354217069, 0.26...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 84, 'cv': 10, 'verbose...  ...  [0.34903751113309245, 0.4840813354217069, 0.26...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_46.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_46.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 46, 'cv': 10, 'verbose...  ...  [0.4782282308686422, -0.010953876536617847, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 46, 'cv': 10, 'verbose...  ...  [0.4782282308686422, -0.010953876536617847, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_24.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_24.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 24, 'cv': 10, 'verbose...  ...  [0.4835792935218227, -0.021199125226553435, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 24, 'cv': 10, 'verbose...  ...  [0.4835792935218227, -0.021199125226553435, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_77.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_77.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 77, 'cv': 10, 'verbose...  ...  [0.4122503252030496, 0.5534567438517023, 0.327...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 77, 'cv': 10, 'verbose...  ...  [0.4122503252030496, 0.5534567438517023, 0.327...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_40.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_40.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 40, 'cv': 10, 'verbose...  ...  [0.47967691561016174, -0.013765824781462517, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 40, 'cv': 10, 'verbose...  ...  [0.47967691561016174, -0.013765824781462517, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_65.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_65.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 65, 'cv': 10, 'verbose...  ...  [0.4622243989770886, 0.6148695502843236, 0.372...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 65, 'cv': 10, 'verbose...  ...  [0.4622243989770886, 0.6148695502843236, 0.372...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_2.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_2.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 2, 'cv': 10, 'verbose'...  ...  [0.4887912730791968, -0.03118025975818735, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 2, 'cv': 10, 'verbose'...  ...  [0.4887912730791968, -0.03118025975818735, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_56.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_56.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 56, 'cv': 10, 'verbose...  ...  [0.47602143213164394, -0.006077307390767764, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 56, 'cv': 10, 'verbose...  ...  [0.47602143213164394, -0.006077307390767764, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_85.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_85.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 85, 'cv': 10, 'verbose...  ...  [0.3325521909075066, 0.4664344200811269, 0.255...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 85, 'cv': 10, 'verbose...  ...  [0.3325521909075066, 0.4664344200811269, 0.255...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_47.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_47.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 47, 'cv': 10, 'verbose...  ...  [0.47798850284390954, -0.010484212466566905, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 47, 'cv': 10, 'verbose...  ...  [0.47798850284390954, -0.010484212466566905, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_78.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_78.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 78, 'cv': 10, 'verbose...  ...  [0.40267297608245833, 0.5418747513712865, 0.31...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 78, 'cv': 10, 'verbose...  ...  [0.40267297608245833, 0.5418747513712865, 0.31...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_27.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_27.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 27, 'cv': 10, 'verbose...  ...  [0.48284930410467114, -0.019810074530981745, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 27, 'cv': 10, 'verbose...  ...  [0.48284930410467114, -0.019810074530981745, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_12.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_12.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 12, 'cv': 10, 'verbose...  ...  [0.48647708120408595, -0.026693495023112315, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 12, 'cv': 10, 'verbose...  ...  [0.48647708120408595, -0.026693495023112315, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_39.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_39.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 39, 'cv': 10, 'verbose...  ...  [0.4799201443991379, -0.014232922745487073, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 39, 'cv': 10, 'verbose...  ...  [0.4799201443991379, -0.014232922745487073, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_67.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_67.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 67, 'cv': 10, 'verbose...  ...  [0.45781052123207977, 0.6094672352038613, 0.36...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 67, 'cv': 10, 'verbose...  ...  [0.45781052123207977, 0.6094672352038613, 0.36...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_5.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_5.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 5, 'cv': 10, 'verbose'...  ...  [0.48810676454881907, -0.029841967968735904, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 5, 'cv': 10, 'verbose'...  ...  [0.48810676454881907, -0.029841967968735904, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_86.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_86.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 86, 'cv': 10, 'verbose...  ...  [0.3141480010500077, 0.44753009619107015, 0.23...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 86, 'cv': 10, 'verbose...  ...  [0.3141480010500077, 0.44753009619107015, 0.23...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_57.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_57.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 57, 'cv': 10, 'verbose...  ...  [0.4757763815068961, -0.0056041197986313445, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 57, 'cv': 10, 'verbose...  ...  [0.4757763815068961, -0.0056041197986313445, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_49.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_49.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 49, 'cv': 10, 'verbose...  ...  [0.47750721434031873, -0.009538482241154035, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 49, 'cv': 10, 'verbose...  ...  [0.47750721434031873, -0.009538482241154035, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_38.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_38.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 38, 'cv': 10, 'verbose...  ...  [0.4801633406896183, -0.01469875976241942, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 38, 'cv': 10, 'verbose...  ...  [0.4801633406896183, -0.01469875976241942, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_79.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_79.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 79, 'cv': 10, 'verbose...  ...  [0.40172667665822764, 0.5422966156994307, 0.31...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 79, 'cv': 10, 'verbose...  ...  [0.40172667665822764, 0.5422966156994307, 0.31...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_31.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_31.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 31, 'cv': 10, 'verbose...  ...  [0.4818709288569363, -0.0179530324042764, 0.62...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 31, 'cv': 10, 'verbose...  ...  [0.4818709288569363, -0.0179530324042764, 0.62...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_21.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_21.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 21, 'cv': 10, 'verbose...  ...  [0.48430614250545845, -0.022583694116007507, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 21, 'cv': 10, 'verbose...  ...  [0.48430614250545845, -0.022583694116007507, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_88.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_88.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 88, 'cv': 10, 'verbose...  ...  [0.2710083845133096, 0.4043605495251462, 0.197...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 88, 'cv': 10, 'verbose...  ...  [0.2710083845133096, 0.4043605495251462, 0.197...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_1.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_1.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 1, 'cv': 10, 'verbose'...  ...  [0.48901963713510743, -0.03162417974979588, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 1, 'cv': 10, 'verbose'...  ...  [0.48901963713510743, -0.03162417974979588, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_68.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_68.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 68, 'cv': 10, 'verbose...  ...  [0.45333679514105524, 0.6032765837848159, 0.36...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 68, 'cv': 10, 'verbose...  ...  [0.45333679514105524, 0.6032765837848159, 0.36...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47977
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_50.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_50.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 50, 'cv': 10, 'verbose...  ...  [0.47748886285566294, -0.008921506098109223, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 50, 'cv': 10, 'verbose...  ...  [0.47748886285566294, -0.008921506098109223, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_59.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_59.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 59, 'cv': 10, 'verbose...  ...  [0.4729112460374848, -0.0031653459019782325, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 59, 'cv': 10, 'verbose...  ...  [0.4729112460374848, -0.0031653459019782325, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47976
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_41.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_41.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 41, 'cv': 10, 'verbose...  ...  [0.4794334985370092, -0.01329826272585956, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 41, 'cv': 10, 'verbose...  ...  [0.4794334985370092, -0.01329826272585956, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_26.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_26.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 26, 'cv': 10, 'verbose...  ...  [0.4830928363445377, -0.020273536015841566, 0....
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 26, 'cv': 10, 'verbose...  ...  [0.4830928363445377, -0.020273536015841566, 0....
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47980
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_80.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_80.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 80, 'cv': 10, 'verbose...  ...  [0.3908633946584827, 0.5294532634295595, 0.307...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 80, 'cv': 10, 'verbose...  ...  [0.3908633946584827, 0.5294532634295595, 0.307...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_14.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_14.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 14, 'cv': 10, 'verbose...  ...  [0.48599946320380927, -0.025784871748242337, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 14, 'cv': 10, 'verbose...  ...  [0.48599946320380927, -0.025784871748242337, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_87.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_87.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 87, 'cv': 10, 'verbose...  ...  [0.29374461995035306, 0.4269130779919062, 0.21...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 87, 'cv': 10, 'verbose...  ...  [0.29374461995035306, 0.4269130779919062, 0.21...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47979
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_72.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_72.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 72, 'cv': 10, 'verbose...  ...  [0.44187877542392934, 0.5898325468676355, 0.35...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 72, 'cv': 10, 'verbose...  ...  [0.44187877542392934, 0.5898325468676355, 0.35...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47973
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_4.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_4.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 4, 'cv': 10, 'verbose'...  ...  [0.488337237909144, -0.030287160024613156, 0.6...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 4, 'cv': 10, 'verbose'...  ...  [0.488337237909144, -0.030287160024613156, 0.6...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47978
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_61.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_61.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 61, 'cv': 10, 'verbose...  ...  [0.46971312812915655, -0.0003643936866095554, ...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 61, 'cv': 10, 'verbose...  ...  [0.46971312812915655, -0.0003643936866095554, ...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47974
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_19.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_19.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 19, 'cv': 10, 'verbose...  ...  [0.48478690447570083, -0.023500761639221643, 0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 19, 'cv': 10, 'verbose...  ...  [0.48478690447570083, -0.023500761639221643, 0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47981
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_89.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_89.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 89, 'cv': 10, 'verbose...  ...  [0.24607713999870529, 0.3801828086122879, 0.17...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 89, 'cv': 10, 'verbose...  ...  [0.24607713999870529, 0.3801828086122879, 0.17...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_90.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_90.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 90, 'cv': 10, 'verbose...  ...  [0.1909499611735627, 0.3233347360386172, 0.123...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 90, 'cv': 10, 'verbose...  ...  [0.1909499611735627, 0.3233347360386172, 0.123...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_91.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_91.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 91, 'cv': 10, 'verbose...  ...  [0.1877075125710308, 0.32425971476661447, 0.11...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 91, 'cv': 10, 'verbose...  ...  [0.1877075125710308, 0.32425971476661447, 0.11...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_92.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_92.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 92, 'cv': 10, 'verbose...  ...  [0.12126308219525196, 0.2559247212503417, 0.05...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 92, 'cv': 10, 'verbose...  ...  [0.12126308219525196, 0.2559247212503417, 0.05...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_96.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_96.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 96, 'cv': 10, 'verbose...  ...  [0.0130319059858176, -0.10041278553674482, 0.0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 96, 'cv': 10, 'verbose...  ...  [0.0130319059858176, -0.10041278553674482, 0.0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_94.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_94.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 94, 'cv': 10, 'verbose...  ...  [0.034180526482918826, 0.17357079322270033, -0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 94, 'cv': 10, 'verbose...  ...  [0.034180526482918826, 0.17357079322270033, -0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_95.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_95.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 95, 'cv': 10, 'verbose...  ...  [0.1254676667976157, -0.21109361038213154, 0.1...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 95, 'cv': 10, 'verbose...  ...  [0.1254676667976157, -0.21109361038213154, 0.1...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_97.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_97.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 97, 'cv': 10, 'verbose...  ...  [-0.361300742242436, -0.9009716367461016, -0.3...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 97, 'cv': 10, 'verbose...  ...  [-0.361300742242436, -0.9009716367461016, -0.3...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_98.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_98.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 98, 'cv': 10, 'verbose...  ...  [-0.27705636499515557, -0.8347413842540399, -0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 98, 'cv': 10, 'verbose...  ...  [-0.27705636499515557, -0.8347413842540399, -0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_99.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_99.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 99, 'cv': 10, 'verbose...  ...  [-0.18075040390628985, -0.7597483908524204, -0...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 99, 'cv': 10, 'verbose...  ...  [-0.18075040390628985, -0.7597483908524204, -0...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+
+*****
+***** Function to fetch data
+***** Worker ID:                         47975
+*****
+***** Input parameters
+***** Filename:                          ../output/raw/test2b1b1/44137284/test2b1b1_44137284_100.pickle.zip
+***** List of variable(s) to keep:       []
+***** Optional use of default NA values: False
+***** Optional NA value(s):              ['']
+***** Whether to show data types or not: 1
+***** Whether to show missing or not:    1
+***** Whether to infer types or not:     False
+***** Whether to tandardize or not:      False
+***** Whether to check types or not:     False
+***** Data loaded:     ../output/raw/test2b1b1/44137284/test2b1b1_44137284_100.pickle.zip
+***** Data dimensions: (1, 6)
+***** Column data types:
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+***** Missing values by column:
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+***** First few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 100, 'cv': 10, 'verbos...  ...  [-0.5783575136077695, -0.022677707593664317, -...
+
+[1 rows x 6 columns]
+***** Last few rows:
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 100, 'cv': 10, 'verbos...  ...  [-0.5783575136077695, -0.022677707593664317, -...
+
+[1 rows x 6 columns]
+
+*****
+***** Function to fetch data completed
+*****
+
+*****
+***** Extraction completed
+*****
+***** Compiled dataframe dimensions: (100, 6)
+input_params     object
+model_params     object
+alpha_          float64
+mse             float64
+nonzerovars      object
+nonzerocoefs     object
+dtype: object
+input_params    0
+model_params    0
+alpha_          0
+mse             0
+nonzerovars     0
+nonzerocoefs    0
+dtype: int64
+
+                                        input_params  ...                                       nonzerocoefs
+0  {'test': 0, 'l1_ratio': 20, 'cv': 10, 'verbose...  ...  [0.4845466493051625, -0.02304255769275668, 0.6...
+1  {'test': 0, 'l1_ratio': 3, 'cv': 10, 'verbose'...  ...  [0.48856646743430215, -0.03073226531435403, 0....
+2  {'test': 0, 'l1_ratio': 7, 'cv': 10, 'verbose'...  ...  [0.4876446278785259, -0.028953127225411327, 0....
+3  {'test': 0, 'l1_ratio': 6, 'cv': 10, 'verbose'...  ...  [0.48787577630773826, -0.029397723126486947, 0...
+4  {'test': 0, 'l1_ratio': 9, 'cv': 10, 'verbose'...  ...  [0.4871797168832517, -0.0280525019514225, 0.62...
+
+[5 rows x 6 columns]
+
+                                         input_params  ...                                       nonzerocoefs
+95  {'test': 0, 'l1_ratio': 95, 'cv': 10, 'verbose...  ...  [0.1254676667976157, -0.21109361038213154, 0.1...
+96  {'test': 0, 'l1_ratio': 97, 'cv': 10, 'verbose...  ...  [-0.361300742242436, -0.9009716367461016, -0.3...
+97  {'test': 0, 'l1_ratio': 98, 'cv': 10, 'verbose...  ...  [-0.27705636499515557, -0.8347413842540399, -0...
+98  {'test': 0, 'l1_ratio': 99, 'cv': 10, 'verbose...  ...  [-0.18075040390628985, -0.7597483908524204, -0...
+99  {'test': 0, 'l1_ratio': 100, 'cv': 10, 'verbos...  ...  [-0.5783575136077695, -0.022677707593664317, -...
+
+[5 rows x 6 columns]
+***** Function to fetch data in parallel completed
+*****
+
+*****
+***** GET PLOT DATA
+*****
+***** Collect data for plotting
+***** Data loaded and compiled:
+***** Data dimensions: (100, 2)
+***** Data types:
+l1_ratio    float64
+mse         float64
+dtype: object
+***** Missing data:
+l1_ratio    0
+mse         0
+dtype: int64
+***** First row:
+l1_ratio       0.010000
+mse         8232.700789
+Name: 0, dtype: float64
+***** Sample data:
+    l1_ratio          mse
+0       0.01  8232.700789
+0       0.02  8232.385610
+0       0.03  8232.073349
+0       0.04  8231.763975
+0       0.05  8231.457513
+..       ...          ...
+0       0.96  8276.702703
+0       0.97  8286.300545
+0       0.98  8287.385347
+0       0.99  8288.447930
+0       1.00  8294.189649
+
+[100 rows x 2 columns]
+
+*****
+***** GENERATE PLOT
+*****
+***** Generate plot for MSE as function of mixing parameter
+***** Plot saved: ../output/plots/test2b1b2_python_elastic_net_model.pdf
+***** Plot saved: ../output/plots/test2b1b2_python_elastic_net_model.png
+***** Plot saved: ../output/plots/test2b1b2_python_elastic_net_model.eps
+
+
+***************************
+***** Job Information *****
+***************************
+***** Datetime:          2022-09-22 09:58:42
+***** LSF batch job ID:  44180023
+***** Number of core(s): 10
+***** User:              hmiura
+***** Environment:       /home/hmiura/anaconda3/envs/testpyenv
+***** Platform:          Linux-3.10.0-1062.el7.x86_64-x86_64-with-glibc2.17
+***** Software version:  3.10.4
+***** Hostname:          node101
+***** Working directory: /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code
+***** Program name:      test2b1b2
+***** CPU model name:
+model name	: Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+***********************************
+***** Installed User Packages *****
+***********************************
+# packages in environment at /home/hmiura/anaconda3/envs/testpyenv:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                        main  
+_openmp_mutex             5.1                       1_gnu  
+blas                      1.0                         mkl    anaconda
+bottleneck                1.3.4                    pypi_0    pypi
+brotli                    1.0.9                h166bdaf_7    conda-forge
+brotli-bin                1.0.9                h166bdaf_7    conda-forge
+bzip2                     1.0.8                h7b6447c_0  
+ca-certificates           2022.9.14            ha878542_0    conda-forge
+certifi                   2022.9.14          pyhd8ed1ab_0    conda-forge
+cycler                    0.11.0             pyhd8ed1ab_0    conda-forge
+dbus                      1.13.6               he372182_0    conda-forge
+expat                     2.2.10               h9c3ff4c_0    conda-forge
+fontconfig                2.13.1               h6c09931_0  
+fonttools                 4.25.0             pyhd3eb1b0_0  
+freetype                  2.10.4               h0708190_1    conda-forge
+giflib                    5.2.1                h36c2ea0_2    conda-forge
+glib                      2.69.1               h4ff587b_1  
+gst-plugins-base          1.14.0               hbbd80ab_1  
+gstreamer                 1.14.0               h28cd5cc_2  
+icu                       58.2              hf484d3e_1000    conda-forge
+intel-openmp              2021.4.0          h06a4308_3561    anaconda
+joblib                    1.1.0              pyhd3eb1b0_0    anaconda
+jpeg                      9e                   h166bdaf_1    conda-forge
+kiwisolver                1.4.2                    pypi_0    pypi
+lcms2                     2.12                 hddcbb42_0    conda-forge
+ld_impl_linux-64          2.38                 h1181459_1  
+libbrotlicommon           1.0.9                h166bdaf_7    conda-forge
+libbrotlidec              1.0.9                h166bdaf_7    conda-forge
+libbrotlienc              1.0.9                h166bdaf_7    conda-forge
+libffi                    3.3                  he6710b0_2  
+libgcc-ng                 11.2.0               h1234567_1  
+libgfortran-ng            7.5.0               ha8ba4b0_17    anaconda
+libgfortran4              7.5.0               ha8ba4b0_17    anaconda
+libgomp                   11.2.0               h1234567_1  
+libpng                    1.6.37               hbc83047_0  
+libstdcxx-ng              11.2.0               h1234567_1  
+libtiff                   4.2.0                h85742a9_0  
+libuuid                   1.0.3                h7f8727e_2  
+libwebp                   1.2.2                h55f646e_0  
+libwebp-base              1.2.2                h7f8727e_0  
+libxcb                    1.13              h7f98852_1004    conda-forge
+libxml2                   2.9.14               h74e7548_0  
+lz4-c                     1.9.3                h9c3ff4c_1    conda-forge
+matplotlib                3.5.2                    pypi_0    pypi
+matplotlib-base           3.5.2           py310h5701ce4_0    conda-forge
+mkl                       2021.4.0           h06a4308_640    anaconda
+mkl-fft                   1.3.1                    pypi_0    pypi
+mkl-random                1.2.2                    pypi_0    pypi
+mkl-service               2.4.0                    pypi_0    pypi
+mkl_fft                   1.3.1           py310hd6ae3a3_0    anaconda
+mkl_random                1.2.2           py310h00e6091_0    anaconda
+munkres                   1.1.4              pyh9f0ad1d_0    conda-forge
+ncurses                   6.3                  h5eee18b_3  
+numexpr                   2.8.1                    pypi_0    pypi
+numpy                     1.22.3                   pypi_0    pypi
+numpy-base                1.22.3          py310h9585f30_0    anaconda
+openssl                   1.1.1q               h7f8727e_0    anaconda
+packaging                 21.3               pyhd3eb1b0_0    anaconda
+pandas                    1.4.2                    pypi_0    pypi
+pcre                      8.45                 h9c3ff4c_0    conda-forge
+pillow                    9.2.0                    pypi_0    pypi
+pip                       22.1.2                   pypi_0    pypi
+pthread-stubs             0.4               h36c2ea0_1001    conda-forge
+pyparsing                 3.0.4              pyhd3eb1b0_0    anaconda
+pyqt                      5.9.2           py310h295c915_6  
+python                    3.10.4               h12debd9_0  
+python-dateutil           2.8.2              pyhd3eb1b0_0    anaconda
+python_abi                3.10                    2_cp310    conda-forge
+pytz                      2022.1                   pypi_0    pypi
+qt                        5.9.7                h5867ecd_1  
+readline                  8.1.2                h7f8727e_1  
+scikit-learn              1.1.1                    pypi_0    pypi
+scipy                     1.7.3                    pypi_0    pypi
+setuptools                61.2.0                   pypi_0    pypi
+sip                       4.19.13                  pypi_0    pypi
+six                       1.16.0             pyhd3eb1b0_1    anaconda
+sqlite                    3.39.2               h5082296_0  
+threadpoolctl             2.2.0              pyh0d69192_0    anaconda
+tk                        8.6.12               h1ccaba5_0  
+tornado                   6.1                      pypi_0    pypi
+tzdata                    2022a                hda174b7_0  
+wheel                     0.37.1             pyhd3eb1b0_0  
+xorg-libxau               1.0.9                h7f98852_0    conda-forge
+xorg-libxdmcp             1.1.3                h7f98852_0    conda-forge
+xz                        5.2.5                h7f8727e_1  
+zlib                      1.2.12               h7f8727e_2  
+zstd                      1.4.9                ha95c52a_0    conda-forge
