@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 09/22/2022: Modified.
-# 09/15/2022: Previously modified.
+# 09/23/2022: Modified.
+# 09/22/2022: Previously modified.
 # 08/23/2022: Created.
 # Description: 
 #   - Test program.
@@ -18,6 +18,8 @@
 #     - Set seed before generating fold IDs.
 #   09/22/2022:
 #     - Set logic to capture estimation results.
+#   09/23/2022:
+#     - Save input parameters in results object.
 ##########################################################################
 
 #########
@@ -182,7 +184,8 @@ for(i in 1:params[["nrounds"]]){
     "lambda_min"=cvfit[["lambda.min"]],
     "mse"=mean((as.matrix(y)-predict(cvfit,newx=Matrix(as.matrix(X),
     sparse=TRUE),s=cvfit[["lambda.min"]]))^2),
-    "nonzero_coeffs"=fit_coeffs_nonzero
+    "nonzero_coeffs"=fit_coeffs_nonzero,
+    "params"=params
   )
 }
 # Show elapsed times.
@@ -215,7 +218,7 @@ Sys.getenv("SLURM_ARRAY_TASK_ID"),".Rdata")
 # Set zip filename.
 outfilezip=paste0(outfile,".zip")
 # Save data.
-save(params,res,file=outfile)
+save(res,file=outfile)
 # Show results.
 cat("\n***** File saved:",outfile)
 # Zip data.
