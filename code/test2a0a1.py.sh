@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=11
+#SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1G
-#SBATCH --partition=sched_mit_sloan_batch
+#SBATCH --partition=sched_mit_sloan_interactive
 #SBATCH --time=0-01:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=hmiura@mit.edu
@@ -12,22 +12,18 @@
 
 # Set program name.
 program="test2"
-version="b1a1"
+version="a0a1"
 # Activate environment.
 source activate testpyenv
 
 # Set input parameters.
 params="{
 'test':0,
-'l1_ratio':1,
-'cv':10,
-'verbose':1,
-'n_jobs':-2,
+'n_samples':100000,
+'n_features':1000,
 'random_state':12345,
-'nrounds':10,
-'alphas':[1.1**j for j in range(-50,50)],
-'outcome_data':'test2a0a1_outcome.csv.zip',
-'input_data':'test2a0a1_input.csv.zip'
+'fracbinary':0.9,
+'binarycutoff':0
 }"
 
 # Execute script.

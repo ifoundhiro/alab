@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH -a 1-100
-#SBATCH --cpus-per-task=6
+#SBATCH -a 100
+#SBATCH --cpus-per-task=11
 #SBATCH --mem-per-cpu=1G
-#SBATCH --partition=sched_mit_sloan_batch
+#SBATCH --partition=newnodes
 #SBATCH --time=0-02:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=hmiura@mit.edu
@@ -24,10 +24,12 @@ params="list(
 'adj'=100,
 'sparse'=TRUE,
 'trace.it'=1,
-'nrounds'=1,
+'nrounds'=10,
 'lambdas'=1.1^seq(-50,49,by=1),
-'outcome_data'='test2a0_outcome.csv.zip',
-'input_data'='test2a0_input.csv.zip'
+'outcome_data'='test2a0a1_outcome.csv.zip',
+'input_data'='test2a0a1_input.csv.zip',
+'standardize'=FALSE,
+'standardize.response'=FALSE
 )"
 
 # Create output folder for logs.

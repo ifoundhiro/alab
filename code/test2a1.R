@@ -3,8 +3,8 @@
 # Position: Doctoral Student
 # Organization: MIT Sloan
 ##########################################################################
-# 09/23/2022: Modified.
-# 09/22/2022: Previously modified.
+# 09/24/2022: Modified.
+# 09/23/2022: Previously modified.
 # 08/23/2022: Created.
 # Description: 
 #   - Test program.
@@ -20,6 +20,8 @@
 #     - Set logic to capture estimation results.
 #   09/23/2022:
 #     - Save input parameters in results object.
+#   09/24/2022:
+#     - Externalize options to standardize variables for glmnet.
 ##########################################################################
 
 #########
@@ -167,7 +169,9 @@ for(i in 1:params[["nrounds"]]){
     parallel=params[["parallel"]],
     trace.it=params[["trace.it"]],
     alpha=params[["alpha"]]/params[["adj"]],
-    lambda=params[["lambdas"]])
+    lambda=params[["lambdas"]],
+    standardize=params[["standardize"]],
+    standardize.response=params[["standardize.response"]])
   # Stop timing execution.
   fit_time  <- proc.time() - cvglmnet_start
   # Show elapsed time.

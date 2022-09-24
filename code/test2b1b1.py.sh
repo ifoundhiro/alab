@@ -2,7 +2,7 @@
 #SBATCH -a 1-100
 #SBATCH --cpus-per-task=6
 #SBATCH --mem-per-cpu=1G
-#SBATCH --partition=sched_mit_sloan_batch
+#SBATCH --partition=sched_any_quicktest
 #SBATCH --time=0-00:10
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=hmiura@mit.edu
@@ -25,8 +25,8 @@ params="{
 'random_state':12345,
 'adj':100,
 'alphas':[1.1**j for j in range(-50,50)],
-'outcome_data':'test2a0_outcome.csv.zip',
-'input_data':'test2a0_input.csv.zip'
+'outcome_data':'test2a0a1_outcome.csv.zip',
+'input_data':'test2a0a1_input.csv.zip'
 }"
 
 # Create output folder for logs.

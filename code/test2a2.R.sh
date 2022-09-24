@@ -19,7 +19,7 @@ source activate testrenv
 # Set input parameters.
 params='list(
 "test"=0,
-"sourcedir"="test2a1/44193170/",
+"sourcedir"="test2a1/44198319/",
 "caption_font_size"=12,
 "base_font_size"=14,
 "title_font_size"=16,

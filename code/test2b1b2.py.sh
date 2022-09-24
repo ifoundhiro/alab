@@ -19,14 +19,14 @@ source activate testpyenv
 # Set input parameters.
 params="{
 'test':0,
-'sourcedir':'test2b1b1/44137284',
+'sourcedir':'test2b1b1/44198496',
 'xvar':'l1_ratio',
 'yvar':'mse',
 'fontsize_notes':10,
 'fontsize_overall':14,
 'fontsize_subtitle':14,
 'fontsize_title':16,
-'plot_title':'Python Elastic Net Model',
+'plot_title':'Python Elastic Net Training Set Mean Squared Error',
 'yaxis_title':'Mean Squared Error',
 'xaxis_title':'Mixing Parameter',
 'linewidth':1.5,
