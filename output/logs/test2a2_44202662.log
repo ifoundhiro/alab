@@ -1,0 +1,1269 @@
+running
+  '/home/hmiura/anaconda3/envs/testrenv/lib/R/bin/R --no-echo --no-restore --file=test2a2.R --args test2 a2 list(
+"test"=0,
+"sourcedir"="test2a1/44198319/",
+"caption_font_size"=12,
+"base_font_size"=14,
+"title_font_size"=16,
+"xvar"="alpha",
+"yvar"="mse",
+"ylim_min"=0.249,
+"ylim_max"=0.254,
+"width"=9,
+"height"=6,
+"title"="R Elastic Net Training Set Mean Squared Error",
+"ylab"="Mean Squared Error",
+"xlab"="Mixing Parameter",
+"line_color"="red",
+"line_size"=1.2
+)'
+
+
+***************************
+***** Job Information *****
+***************************
+***** Datetime:           2022-09-25 12:26:47 EDT 
+***** Job ID:             44202662 
+***** Number of core(s):  11 
+***** User:               hmiura 
+***** Environment:        /home/hmiura/anaconda3/envs/testrenv 
+***** Platform:           x86_64-conda-linux-gnu 
+***** Software version:   R version 4.2.1 (2022-06-23) 
+***** Hostname:           node101 
+***** Working directory:  /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code 
+***** Program name:       test2a2
+***** CPU model name:
+model name	: Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+
+
+*****
+***** SET PARALLELIZATION SETTINGS
+*****[1] "*****Setup parallel processing"
+
+***** Number of cores:    11
+***** Number of workers:  10
+***** Parallel option:    TRUE
+starting worker pid=7950 on localhost:11285 at 12:26:51.138
+starting worker pid=7953 on localhost:11285 at 12:26:51.146
+starting worker pid=7946 on localhost:11285 at 12:26:51.160
+starting worker pid=7945 on localhost:11285 at 12:26:51.163
+starting worker pid=7951 on localhost:11285 at 12:26:51.164
+starting worker pid=7954 on localhost:11285 at 12:26:51.171
+starting worker pid=7952 on localhost:11285 at 12:26:51.172
+starting worker pid=7949 on localhost:11285 at 12:26:51.176
+starting worker pid=7947 on localhost:11285 at 12:26:51.185
+starting worker pid=7948 on localhost:11285 at 12:26:51.185
+
+***** Multi-core setting
+***** Estimation parallel option: TRUE 
+socket cluster with 10 nodes on host ‘localhost’
+
+***** Input parameters:
+$test
+[1] 0
+
+$sourcedir
+[1] "test2a1/44198319/"
+
+$caption_font_size
+[1] 12
+
+$base_font_size
+[1] 14
+
+$title_font_size
+[1] 16
+
+$xvar
+[1] "alpha"
+
+$yvar
+[1] "mse"
+
+$ylim_min
+[1] 0.249
+
+$ylim_max
+[1] 0.254
+
+$width
+[1] 9
+
+$height
+[1] 6
+
+$title
+[1] "R Elastic Net Training Set Mean Squared Error"
+
+$ylab
+[1] "Mean Squared Error"
+
+$xlab
+[1] "Mixing Parameter"
+
+$line_color
+[1] "red"
+
+$line_size
+[1] 1.2
+
+$parallel
+[1] TRUE
+
+
+
+*****
+***** COMPILE RESULTS
+*****
+***** Get zip files
+***** # of zip files to load: 100 
+  [1] "../output/raw/test2a1/44198319/test2a1_44198319_1.Rdata.zip"  
+  [2] "../output/raw/test2a1/44198319/test2a1_44198319_10.Rdata.zip" 
+  [3] "../output/raw/test2a1/44198319/test2a1_44198319_100.Rdata.zip"
+  [4] "../output/raw/test2a1/44198319/test2a1_44198319_11.Rdata.zip" 
+  [5] "../output/raw/test2a1/44198319/test2a1_44198319_12.Rdata.zip" 
+  [6] "../output/raw/test2a1/44198319/test2a1_44198319_13.Rdata.zip" 
+  [7] "../output/raw/test2a1/44198319/test2a1_44198319_14.Rdata.zip" 
+  [8] "../output/raw/test2a1/44198319/test2a1_44198319_15.Rdata.zip" 
+  [9] "../output/raw/test2a1/44198319/test2a1_44198319_16.Rdata.zip" 
+ [10] "../output/raw/test2a1/44198319/test2a1_44198319_17.Rdata.zip" 
+ [11] "../output/raw/test2a1/44198319/test2a1_44198319_18.Rdata.zip" 
+ [12] "../output/raw/test2a1/44198319/test2a1_44198319_19.Rdata.zip" 
+ [13] "../output/raw/test2a1/44198319/test2a1_44198319_2.Rdata.zip"  
+ [14] "../output/raw/test2a1/44198319/test2a1_44198319_20.Rdata.zip" 
+ [15] "../output/raw/test2a1/44198319/test2a1_44198319_21.Rdata.zip" 
+ [16] "../output/raw/test2a1/44198319/test2a1_44198319_22.Rdata.zip" 
+ [17] "../output/raw/test2a1/44198319/test2a1_44198319_23.Rdata.zip" 
+ [18] "../output/raw/test2a1/44198319/test2a1_44198319_24.Rdata.zip" 
+ [19] "../output/raw/test2a1/44198319/test2a1_44198319_25.Rdata.zip" 
+ [20] "../output/raw/test2a1/44198319/test2a1_44198319_26.Rdata.zip" 
+ [21] "../output/raw/test2a1/44198319/test2a1_44198319_27.Rdata.zip" 
+ [22] "../output/raw/test2a1/44198319/test2a1_44198319_28.Rdata.zip" 
+ [23] "../output/raw/test2a1/44198319/test2a1_44198319_29.Rdata.zip" 
+ [24] "../output/raw/test2a1/44198319/test2a1_44198319_3.Rdata.zip"  
+ [25] "../output/raw/test2a1/44198319/test2a1_44198319_30.Rdata.zip" 
+ [26] "../output/raw/test2a1/44198319/test2a1_44198319_31.Rdata.zip" 
+ [27] "../output/raw/test2a1/44198319/test2a1_44198319_32.Rdata.zip" 
+ [28] "../output/raw/test2a1/44198319/test2a1_44198319_33.Rdata.zip" 
+ [29] "../output/raw/test2a1/44198319/test2a1_44198319_34.Rdata.zip" 
+ [30] "../output/raw/test2a1/44198319/test2a1_44198319_35.Rdata.zip" 
+ [31] "../output/raw/test2a1/44198319/test2a1_44198319_36.Rdata.zip" 
+ [32] "../output/raw/test2a1/44198319/test2a1_44198319_37.Rdata.zip" 
+ [33] "../output/raw/test2a1/44198319/test2a1_44198319_38.Rdata.zip" 
+ [34] "../output/raw/test2a1/44198319/test2a1_44198319_39.Rdata.zip" 
+ [35] "../output/raw/test2a1/44198319/test2a1_44198319_4.Rdata.zip"  
+ [36] "../output/raw/test2a1/44198319/test2a1_44198319_40.Rdata.zip" 
+ [37] "../output/raw/test2a1/44198319/test2a1_44198319_41.Rdata.zip" 
+ [38] "../output/raw/test2a1/44198319/test2a1_44198319_42.Rdata.zip" 
+ [39] "../output/raw/test2a1/44198319/test2a1_44198319_43.Rdata.zip" 
+ [40] "../output/raw/test2a1/44198319/test2a1_44198319_44.Rdata.zip" 
+ [41] "../output/raw/test2a1/44198319/test2a1_44198319_45.Rdata.zip" 
+ [42] "../output/raw/test2a1/44198319/test2a1_44198319_46.Rdata.zip" 
+ [43] "../output/raw/test2a1/44198319/test2a1_44198319_47.Rdata.zip" 
+ [44] "../output/raw/test2a1/44198319/test2a1_44198319_48.Rdata.zip" 
+ [45] "../output/raw/test2a1/44198319/test2a1_44198319_49.Rdata.zip" 
+ [46] "../output/raw/test2a1/44198319/test2a1_44198319_5.Rdata.zip"  
+ [47] "../output/raw/test2a1/44198319/test2a1_44198319_50.Rdata.zip" 
+ [48] "../output/raw/test2a1/44198319/test2a1_44198319_51.Rdata.zip" 
+ [49] "../output/raw/test2a1/44198319/test2a1_44198319_52.Rdata.zip" 
+ [50] "../output/raw/test2a1/44198319/test2a1_44198319_53.Rdata.zip" 
+ [51] "../output/raw/test2a1/44198319/test2a1_44198319_54.Rdata.zip" 
+ [52] "../output/raw/test2a1/44198319/test2a1_44198319_55.Rdata.zip" 
+ [53] "../output/raw/test2a1/44198319/test2a1_44198319_56.Rdata.zip" 
+ [54] "../output/raw/test2a1/44198319/test2a1_44198319_57.Rdata.zip" 
+ [55] "../output/raw/test2a1/44198319/test2a1_44198319_58.Rdata.zip" 
+ [56] "../output/raw/test2a1/44198319/test2a1_44198319_59.Rdata.zip" 
+ [57] "../output/raw/test2a1/44198319/test2a1_44198319_6.Rdata.zip"  
+ [58] "../output/raw/test2a1/44198319/test2a1_44198319_60.Rdata.zip" 
+ [59] "../output/raw/test2a1/44198319/test2a1_44198319_61.Rdata.zip" 
+ [60] "../output/raw/test2a1/44198319/test2a1_44198319_62.Rdata.zip" 
+ [61] "../output/raw/test2a1/44198319/test2a1_44198319_63.Rdata.zip" 
+ [62] "../output/raw/test2a1/44198319/test2a1_44198319_64.Rdata.zip" 
+ [63] "../output/raw/test2a1/44198319/test2a1_44198319_65.Rdata.zip" 
+ [64] "../output/raw/test2a1/44198319/test2a1_44198319_66.Rdata.zip" 
+ [65] "../output/raw/test2a1/44198319/test2a1_44198319_67.Rdata.zip" 
+ [66] "../output/raw/test2a1/44198319/test2a1_44198319_68.Rdata.zip" 
+ [67] "../output/raw/test2a1/44198319/test2a1_44198319_69.Rdata.zip" 
+ [68] "../output/raw/test2a1/44198319/test2a1_44198319_7.Rdata.zip"  
+ [69] "../output/raw/test2a1/44198319/test2a1_44198319_70.Rdata.zip" 
+ [70] "../output/raw/test2a1/44198319/test2a1_44198319_71.Rdata.zip" 
+ [71] "../output/raw/test2a1/44198319/test2a1_44198319_72.Rdata.zip" 
+ [72] "../output/raw/test2a1/44198319/test2a1_44198319_73.Rdata.zip" 
+ [73] "../output/raw/test2a1/44198319/test2a1_44198319_74.Rdata.zip" 
+ [74] "../output/raw/test2a1/44198319/test2a1_44198319_75.Rdata.zip" 
+ [75] "../output/raw/test2a1/44198319/test2a1_44198319_76.Rdata.zip" 
+ [76] "../output/raw/test2a1/44198319/test2a1_44198319_77.Rdata.zip" 
+ [77] "../output/raw/test2a1/44198319/test2a1_44198319_78.Rdata.zip" 
+ [78] "../output/raw/test2a1/44198319/test2a1_44198319_79.Rdata.zip" 
+ [79] "../output/raw/test2a1/44198319/test2a1_44198319_8.Rdata.zip"  
+ [80] "../output/raw/test2a1/44198319/test2a1_44198319_80.Rdata.zip" 
+ [81] "../output/raw/test2a1/44198319/test2a1_44198319_81.Rdata.zip" 
+ [82] "../output/raw/test2a1/44198319/test2a1_44198319_82.Rdata.zip" 
+ [83] "../output/raw/test2a1/44198319/test2a1_44198319_83.Rdata.zip" 
+ [84] "../output/raw/test2a1/44198319/test2a1_44198319_84.Rdata.zip" 
+ [85] "../output/raw/test2a1/44198319/test2a1_44198319_85.Rdata.zip" 
+ [86] "../output/raw/test2a1/44198319/test2a1_44198319_86.Rdata.zip" 
+ [87] "../output/raw/test2a1/44198319/test2a1_44198319_87.Rdata.zip" 
+ [88] "../output/raw/test2a1/44198319/test2a1_44198319_88.Rdata.zip" 
+ [89] "../output/raw/test2a1/44198319/test2a1_44198319_89.Rdata.zip" 
+ [90] "../output/raw/test2a1/44198319/test2a1_44198319_9.Rdata.zip"  
+ [91] "../output/raw/test2a1/44198319/test2a1_44198319_90.Rdata.zip" 
+ [92] "../output/raw/test2a1/44198319/test2a1_44198319_91.Rdata.zip" 
+ [93] "../output/raw/test2a1/44198319/test2a1_44198319_92.Rdata.zip" 
+ [94] "../output/raw/test2a1/44198319/test2a1_44198319_93.Rdata.zip" 
+ [95] "../output/raw/test2a1/44198319/test2a1_44198319_94.Rdata.zip" 
+ [96] "../output/raw/test2a1/44198319/test2a1_44198319_95.Rdata.zip" 
+ [97] "../output/raw/test2a1/44198319/test2a1_44198319_96.Rdata.zip" 
+ [98] "../output/raw/test2a1/44198319/test2a1_44198319_97.Rdata.zip" 
+ [99] "../output/raw/test2a1/44198319/test2a1_44198319_98.Rdata.zip" 
+[100] "../output/raw/test2a1/44198319/test2a1_44198319_99.Rdata.zip" 
+
+***** Set custom combine routine[1] "***** Loop through zip files"
+
+
+***** Worker Process:         7952
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_14.Rdata.zip
+***** # of nonzero controls:  185
+***** Results:
+
+
+***** Worker Process:         alpha 7946lambda_min mse
+***** Processing zip file:   
+ ../output/raw/test2a1/44198319/test2a1_44198319_100.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+0.14 0.008518551 0.2514698alpha lambda_min mse
+1 
+
+***** Worker Process:        0.008518551  0.25371147953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_10.Rdata.zip
+***** # of nonzero controls:  319
+***** Results:
+alpha lambda_min mse
+0.1 0.008518551 0.2508989
+
+***** Worker Process:         
+
+***** Worker Process:        7954 7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_13.Rdata.zip
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_12.Rdata.zip
+***** # of nonzero controls:  211
+***** # of nonzero controls:  
+***** Results:
+237
+***** Results:
+alpha lambda_min msealpha lambda_min
+ mse
+0.13 0.008518551 0.120.2513426 
+
+***** Worker Process:        0.008518551  0.25120357949
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_15.Rdata.zip
+***** # of nonzero controls:  159
+***** Results:
+alpha lambda_min 
+
+***** Worker Process:        mse
+
+***** Worker Process:          
+79457950
+***** Processing zip file:   
+***** Processing zip file:     ../output/raw/test2a1/44198319/test2a1_44198319_11.Rdata.zip../output/raw/test2a1/44198319/test2a1_44198319_1.Rdata.zip0.15
+***** # of nonzero controls: 
+***** # of nonzero controls:    9270.008518551 2750.2515854
+***** Results:
+
+***** Results:
+alpha lambda_minalpha  mselambda_min mse
+
+0.01 0.110.008518551  0.0085185510.2495162 0.2510579
+
+***** Worker Process:         7947
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_16.Rdata.zip
+***** # of nonzero controls:  136
+***** Results:
+alpha lambda_min mse
+0.16 0.008518551 0.2516897
+
+***** Worker Process:         7948
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_17.Rdata.zip
+***** # of nonzero controls:  115
+***** Results:
+alpha lambda_min mse
+0.17 0.008518551 0.2517795
+
+***** Worker Process:         7952
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_18.Rdata.zip
+***** # of nonzero controls:  101
+***** Results:
+alpha lambda_min mse
+0.18 0.008518551 0.2518603
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_19.Rdata.zip
+***** # of nonzero controls:  82
+***** Results:
+alpha lambda_min mse
+0.19 0.008518551 0.2519323
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_20.Rdata.zip
+***** # of nonzero controls:  77
+***** Results:
+alpha lambda_min mse
+0.2 0.008518551 0.2519939
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_21.Rdata.zip
+***** # of nonzero controls:  71
+***** Results:
+alpha lambda_min mse
+
+***** Worker Process:         
+7953
+***** Processing zip file:   0.21  ../output/raw/test2a1/44198319/test2a1_44198319_2.Rdata.zip0.008518551 0.2520519
+***** # of nonzero controls:  854
+***** Results:
+alpha lambda_min mse
+0.02 0.008518551 0.2496008
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_22.Rdata.zip
+***** # of nonzero controls:  61
+***** Results:
+alpha lambda_min mse
+0.22 0.008518551 0.2521042
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_23.Rdata.zip
+***** # of nonzero controls:  53
+***** Results:
+alpha lambda_min mse
+
+***** Worker Process:        
+ 7950
+***** Processing zip file:    0.23../output/raw/test2a1/44198319/test2a1_44198319_24.Rdata.zip 0.008518551 
+***** # of nonzero controls:  0.252149546
+***** Results:
+alpha lambda_min mse
+0.24 0.008518551 0.2521907
+
+***** Worker Process:         7952
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_25.Rdata.zip
+***** # of nonzero controls:  41
+***** Results:
+alpha lambda_min mse
+0.25
+
+***** Worker Process:          0.0085185517946 0.2522237
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_26.Rdata.zip
+***** # of nonzero controls:  38
+***** Results:
+alpha lambda_min mse
+0.26 0.008518551 0.2522535
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_27.Rdata.zip
+***** # of nonzero controls:  34
+***** Results:
+alpha lambda_min mse
+0.27 0.008518551 0.2522802
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_28.Rdata.zip
+***** # of nonzero controls:  32
+***** Results:
+alpha lambda_min mse
+0.28 0.008518551 0.252304
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_29.Rdata.zip
+***** # of nonzero controls:  29
+***** Results:
+alpha lambda_min mse
+0.29 0.008518551 0.2523255
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_31.Rdata.zip
+***** # of nonzero controls:  26
+***** Results:
+alpha lambda_min mse
+0.31 0.008518551 0.2523656
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_32.Rdata.zip
+***** # of nonzero controls:  25
+***** Results:
+alpha lambda_min mse
+0.32 0.008518551 0.2523853
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_34.Rdata.zip
+***** # of nonzero controls:  24
+***** Results:
+alpha lambda_min mse
+0.34 0.008518551 0.2524247
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_33.Rdata.zip
+***** # of nonzero controls:  24
+***** Results:
+alpha lambda_min mse
+0.33 0.008518551 0.2524048
+
+***** Worker Process:         7949
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_36.Rdata.zip
+***** # of nonzero controls:  20
+***** Results:
+
+
+***** Worker Process:        alpha  lambda_min 7952mse
+
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_35.Rdata.zip
+***** # of nonzero controls:  0.3622 0.008518551 
+***** Results:
+0.2524636alpha lambda_min mse
+0.35 0.008518551 0.2524447
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_37.Rdata.zip
+***** # of nonzero controls:  20
+***** Results:
+alpha lambda_min mse
+0.37 0.008518551 0.2524827
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_30.Rdata.zip
+***** # of nonzero controls:  28
+
+***** Worker Process:         
+***** Results:
+7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_38.Rdata.zipalpha lambda_min
+***** # of nonzero controls:   mse18
+
+***** Results:
+alpha lambda_min mse0.3 0.008518551 0.2523457
+
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_39.Rdata.zip0.38 
+***** # of nonzero controls: 0.008518551  180.2525012
+***** Results:
+alpha lambda_min mse
+0.39 0.008518551 0.2525199
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_3.Rdata.zip
+***** # of nonzero controls:  768
+***** Results:
+alpha lambda_min mse
+0.03 0.008518551 0.2497188
+
+***** Worker Process:         7947
+
+***** Worker Process:        
+***** Processing zip file:     ../output/raw/test2a1/44198319/test2a1_44198319_40.Rdata.zip7953
+***** # of nonzero controls: 
+***** Processing zip file:     17../output/raw/test2a1/44198319/test2a1_44198319_4.Rdata.zip
+***** Results:
+
+***** # of nonzero controls:  674alpha lambda_min
+***** Results:
+ mse
+alpha lambda_min mse
+0.4 0.008518551 0.25253830.04 
+
+***** Worker Process:        0.008518551  79510.2498603
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_41.Rdata.zip
+***** # of nonzero controls:  17
+***** Results:
+alpha lambda_min mse
+0.41 0.008518551 0.2525571
+
+***** Worker Process:         7952
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_42.Rdata.zip
+***** # of nonzero controls:  15
+***** Results:
+alpha lambda_min mse
+0.42 0.008518551 0.2525756
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_43.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.43 0.008518551 0.2525914
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_44.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.44 0.008518551 0.2526066
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_45.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.45 0.008518551 0.2526221
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_46.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.46 0.008518551 0.2526378
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_47.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.47 0.008518551 0.2526537
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_48.Rdata.zip
+
+***** Worker Process:        
+***** # of nonzero controls:   794513
+***** Results:
+
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_49.Rdata.zipalpha
+***** # of nonzero controls:   lambda_min13 mse
+***** Results:
+
+alpha lambda_min mse0.48
+ 0.008518551 0.25266980.49 0.008518551 0.252686
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_50.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.5 0.008518551 0.2527026
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_5.Rdata.zip
+***** # of nonzero controls:  604
+***** Results:
+alpha lambda_min mse
+0.05 0.008518551 0.2500201
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_52.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.52 0.008518551 0.2527362
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_51.Rdata.zip
+***** # of nonzero controls:  13
+***** Results:
+alpha lambda_min mse
+0.51 0.008518551 0.2527193
+
+***** Worker Process:         7952
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_53.Rdata.zip
+***** # of nonzero controls:  12
+***** Results:
+alpha lambda_min mse
+0.53 0.008518551 0.2527532
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_54.Rdata.zip
+***** # of nonzero controls:  12
+***** Results:
+alpha
+
+***** Worker Process:          lambda_min 7945mse
+
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_55.Rdata.zip
+***** # of nonzero controls:  120.54 
+***** Results:
+alpha lambda_min mse0.008518551
+ 0.25276980.55 0.008518551 0.2527867
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_56.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.56 0.008518551 0.2528036
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_57.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.57 0.008518551 0.2528201
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_58.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.58 0.008518551 0.2528368
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_59.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.59 0.008518551 0.2528536
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_60.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.6 0.008518551 0.2528707
+
+***** Worker Process:         7951
+***** Processing zip file:   
+
+***** Worker Process:          ../output/raw/test2a1/44198319/test2a1_44198319_61.Rdata.zip7946
+***** # of nonzero controls:  11
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_6.Rdata.zip
+***** Results:
+
+***** # of nonzero controls:  alpha549 lambda_min mse
+***** Results:
+
+alpha lambda_min mse0.61 
+0.008518551 0.25288790.06 0.008518551 0.2501932
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_62.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.62 
+
+***** Worker Process:        0.008518551  79530.2529053
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_63.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.63 0.008518551 0.2529229
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_65.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.65 0.008518551 0.2529587
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_66.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+
+***** Worker Process:        
+ 7952
+***** Processing zip file:    0.66../output/raw/test2a1/44198319/test2a1_44198319_64.Rdata.zip 0.008518551 
+***** # of nonzero controls:  0.252976911
+***** Results:
+alpha lambda_min mse
+0.64 0.008518551 0.2529407
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_67.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.67 0.008518551 0.2529953
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_68.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.68 0.008518551 0.2530139
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_69.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.69 0.008518551 0.2530326
+
+***** Worker Process:        
+
+***** Worker Process:          79537950
+***** Processing zip file:   
+***** Processing zip file:     ../output/raw/test2a1/44198319/test2a1_44198319_70.Rdata.zip../output/raw/test2a1/44198319/test2a1_44198319_7.Rdata.zip
+***** # of nonzero controls: 
+***** # of nonzero controls:   11483
+***** Results:
+
+***** Results:
+alphaalpha  lambda_minlambda_min  msemse
+
+0.70.07  0.0085185510.008518551  0.25305160.2503738
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_71.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.71 0.008518551 0.2530707
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_72.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.72 0.008518551 0.2530901
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_73.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.73 0.008518551 0.2531096
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_74.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.74 0.008518551 0.2531293
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_75.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha 
+
+***** Worker Process:        lambda_min  mse7953
+
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_76.Rdata.zip
+***** # of nonzero controls:  0.7511 0.008518551 
+***** Results:
+0.2531493alpha lambda_min mse
+0.76 0.008518551 0.2531694
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_77.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.77 0.008518551 0.2531897
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_78.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.78 0.008518551 0.2532102
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_79.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.79 0.008518551 0.2532309
+
+***** Worker Process:         
+
+***** Worker Process:        7952 7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_80.Rdata.zip
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_8.Rdata.zip
+***** # of nonzero controls:  11
+***** # of nonzero controls:  425
+***** Results:
+
+***** Results:
+alpha lambda_min alphamse lambda_min mse
+
+0.8 0.0085185510.08  0.25325180.008518551 0.2505549
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_81.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.81 0.008518551 0.2532729
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_82.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.82 0.008518551 0.2532942
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_83.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.83 0.008518551 0.2533157
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_84.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.84 0.008518551 0.2533373
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_85.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.85 0.008518551 0.2533592
+
+***** Worker Process:         7949
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_86.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.86 0.008518551 0.2533813
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_87.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.87 0.008518551 0.2534036
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_88.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.88 0.008518551 0.2534261
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_89.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.89 0.008518551 0.2534487
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_9.Rdata.zip
+***** # of nonzero controls:  365
+***** Results:
+alpha lambda_min mse
+0.09 0.008518551 0.2507311
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_90.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.9 0.008518551 0.2534716
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_91.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.91 0.008518551 0.2534947
+
+***** Worker Process:         7953
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_92.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.92 0.008518551 0.253518
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_93.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.93 0.008518551 0.2535414
+
+***** Worker Process:         7945
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_94.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.94 0.008518551 0.2535651
+
+***** Worker Process:         7950
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_95.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+
+
+***** Worker Process:         0.95 79530.008518551 0.253589
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_96.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.96 0.008518551 0.2536131
+
+***** Worker Process:         7946
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_97.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.97 0.008518551 0.2536373
+
+***** Worker Process:         7951
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_98.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.98 0.008518551 0.2536618
+
+***** Worker Process:         7954
+***** Processing zip file:    ../output/raw/test2a1/44198319/test2a1_44198319_99.Rdata.zip
+***** # of nonzero controls:  11
+***** Results:
+alpha lambda_min mse
+0.99 0.008518551 0.2536865[1] "***** Post-process"
+
+***** Data dimensions:
+[1] 100   3
+
+***** Data types:
+Classes ‘data.table’ and 'data.frame':	100 obs. of  3 variables:
+ $ alpha     : num  0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.1 ...
+ $ lambda_min: num  0.00852 0.00852 0.00852 0.00852 0.00852 ...
+ $ mse       : num  0.25 0.25 0.25 0.25 0.25 ...
+ - attr(*, ".internal.selfref")=<externalptr> 
+NULL
+
+***** Missing columns:
+     alpha lambda_min        mse 
+         0          0          0 
+
+***** Data:
+     alpha  lambda_min       mse
+  1:  0.01 0.008518551 0.2495162
+  2:  0.02 0.008518551 0.2496008
+  3:  0.03 0.008518551 0.2497188
+  4:  0.04 0.008518551 0.2498603
+  5:  0.05 0.008518551 0.2500201
+  6:  0.06 0.008518551 0.2501932
+  7:  0.07 0.008518551 0.2503738
+  8:  0.08 0.008518551 0.2505549
+  9:  0.09 0.008518551 0.2507311
+ 10:  0.10 0.008518551 0.2508989
+ 11:  0.11 0.008518551 0.2510579
+ 12:  0.12 0.008518551 0.2512035
+ 13:  0.13 0.008518551 0.2513426
+ 14:  0.14 0.008518551 0.2514698
+ 15:  0.15 0.008518551 0.2515854
+ 16:  0.16 0.008518551 0.2516897
+ 17:  0.17 0.008518551 0.2517795
+ 18:  0.18 0.008518551 0.2518603
+ 19:  0.19 0.008518551 0.2519323
+ 20:  0.20 0.008518551 0.2519939
+ 21:  0.21 0.008518551 0.2520519
+ 22:  0.22 0.008518551 0.2521042
+ 23:  0.23 0.008518551 0.2521495
+ 24:  0.24 0.008518551 0.2521907
+ 25:  0.25 0.008518551 0.2522237
+ 26:  0.26 0.008518551 0.2522535
+ 27:  0.27 0.008518551 0.2522802
+ 28:  0.28 0.008518551 0.2523040
+ 29:  0.29 0.008518551 0.2523255
+ 30:  0.30 0.008518551 0.2523457
+ 31:  0.31 0.008518551 0.2523656
+ 32:  0.32 0.008518551 0.2523853
+ 33:  0.33 0.008518551 0.2524048
+ 34:  0.34 0.008518551 0.2524247
+ 35:  0.35 0.008518551 0.2524447
+ 36:  0.36 0.008518551 0.2524636
+ 37:  0.37 0.008518551 0.2524827
+ 38:  0.38 0.008518551 0.2525012
+ 39:  0.39 0.008518551 0.2525199
+ 40:  0.40 0.008518551 0.2525383
+ 41:  0.41 0.008518551 0.2525571
+ 42:  0.42 0.008518551 0.2525756
+ 43:  0.43 0.008518551 0.2525914
+ 44:  0.44 0.008518551 0.2526066
+ 45:  0.45 0.008518551 0.2526221
+ 46:  0.46 0.008518551 0.2526378
+ 47:  0.47 0.008518551 0.2526537
+ 48:  0.48 0.008518551 0.2526698
+ 49:  0.49 0.008518551 0.2526860
+ 50:  0.50 0.008518551 0.2527026
+ 51:  0.51 0.008518551 0.2527193
+ 52:  0.52 0.008518551 0.2527362
+ 53:  0.53 0.008518551 0.2527532
+ 54:  0.54 0.008518551 0.2527698
+ 55:  0.55 0.008518551 0.2527867
+ 56:  0.56 0.008518551 0.2528036
+ 57:  0.57 0.008518551 0.2528201
+ 58:  0.58 0.008518551 0.2528368
+ 59:  0.59 0.008518551 0.2528536
+ 60:  0.60 0.008518551 0.2528707
+ 61:  0.61 0.008518551 0.2528879
+ 62:  0.62 0.008518551 0.2529053
+ 63:  0.63 0.008518551 0.2529229
+ 64:  0.64 0.008518551 0.2529407
+ 65:  0.65 0.008518551 0.2529587
+ 66:  0.66 0.008518551 0.2529769
+ 67:  0.67 0.008518551 0.2529953
+ 68:  0.68 0.008518551 0.2530139
+ 69:  0.69 0.008518551 0.2530326
+ 70:  0.70 0.008518551 0.2530516
+ 71:  0.71 0.008518551 0.2530707
+ 72:  0.72 0.008518551 0.2530901
+ 73:  0.73 0.008518551 0.2531096
+ 74:  0.74 0.008518551 0.2531293
+ 75:  0.75 0.008518551 0.2531493
+ 76:  0.76 0.008518551 0.2531694
+ 77:  0.77 0.008518551 0.2531897
+ 78:  0.78 0.008518551 0.2532102
+ 79:  0.79 0.008518551 0.2532309
+ 80:  0.80 0.008518551 0.2532518
+ 81:  0.81 0.008518551 0.2532729
+ 82:  0.82 0.008518551 0.2532942
+ 83:  0.83 0.008518551 0.2533157
+ 84:  0.84 0.008518551 0.2533373
+ 85:  0.85 0.008518551 0.2533592
+ 86:  0.86 0.008518551 0.2533813
+ 87:  0.87 0.008518551 0.2534036
+ 88:  0.88 0.008518551 0.2534261
+ 89:  0.89 0.008518551 0.2534487
+ 90:  0.90 0.008518551 0.2534716
+ 91:  0.91 0.008518551 0.2534947
+ 92:  0.92 0.008518551 0.2535180
+ 93:  0.93 0.008518551 0.2535414
+ 94:  0.94 0.008518551 0.2535651
+ 95:  0.95 0.008518551 0.2535890
+ 96:  0.96 0.008518551 0.2536131
+ 97:  0.97 0.008518551 0.2536373
+ 98:  0.98 0.008518551 0.2536618
+ 99:  0.99 0.008518551 0.2536865
+100:  1.00 0.008518551 0.2537114
+     alpha  lambda_min       mse
+
+***** # of nonzero control names: 8886
+***** Table of nonzero control names:
+           Var1 Freq
+1   (Intercept)  100
+94      var_188  100
+175     var_271  100
+286     var_381  100
+531     var_611  100
+592     var_672  100
+604     var_684  100
+838     var_914  100
+848     var_924  100
+858     var_934  100
+882     var_957  100
+906     var_979   55
+894     var_968   52
+655     var_733   42
+922     var_994   42
+857     var_932   41
+875     var_950   41
+852     var_928   39
+878     var_953   37
+883     var_958   37
+824     var_900   35
+902     var_975   35
+853     var_929   34
+915     var_988   34
+903     var_976   32
+877     var_952   31
+880     var_955   30
+891     var_965   30
+873     var_949   29
+364     var_455   28
+839     var_915   28
+911     var_983   28
+54       var_15   27
+618     var_698   27
+29      var_125   26
+345     var_438   26
+474     var_558   26
+827     var_904   26
+515     var_598   25
+673     var_750   25
+835     var_911   25
+152     var_248   24
+432     var_518   24
+450     var_534   24
+495     var_578   24
+590     var_670   24
+158     var_253   23
+182     var_279   23
+207     var_303   23
+213      var_31   23
+
+
+*****
+***** PLOT RESULTS
+*****
+***** Generate plot
+***** Plot exported: ../output/plots/test2a2_r_elastic_net_training_set_mean_squared_error 
+
+***************************
+***** Job Information *****
+***************************
+***** Datetime:           2022-09-25 12:26:53 EDT 
+***** Job ID:             44202662 
+***** Number of core(s):  11 
+***** User:               hmiura 
+***** Environment:        /home/hmiura/anaconda3/envs/testrenv 
+***** Platform:           x86_64-conda-linux-gnu 
+***** Software version:   R version 4.2.1 (2022-06-23) 
+***** Hostname:           node101 
+***** Working directory:  /home/hmiura/hiro/03_Class/05_2022_Fall/alab/code 
+***** Program name:       test2a2
+***** CPU model name:
+model name	: Intel(R) Xeon(R) CPU E5-2650 0 @ 2.00GHz
+***** OS info:
+LSB Version:	:core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.7.1908 (Core)
+Release:	7.7.1908
+Codename:	Core
+
+
+***********************************
+***** Installed User Packages *****
+***********************************
+                    Package   Version
+askpass             askpass       1.1
+assertthat       assertthat     0.2.1
+backports         backports     1.4.1
+base64enc         base64enc     0.1-3
+bit                     bit     4.0.4
+bit64                 bit64     4.0.5
+blob                   blob     1.2.3
+broom                 broom     1.0.1
+bslib                 bslib     0.4.0
+cachem               cachem     1.0.6
+callr                 callr     3.7.2
+cellranger       cellranger     1.1.0
+checkmate         checkmate     2.1.0
+cli                     cli     3.3.0
+clipr                 clipr     0.8.0
+colorspace       colorspace     2.0-3
+cpp11                 cpp11     0.4.2
+crayon               crayon     1.5.1
+curl                   curl     4.3.2
+data.table       data.table    1.14.2
+DBI                     DBI     1.1.3
+dbplyr               dbplyr     2.2.1
+deldir               deldir     1.0-6
+digest               digest    0.6.29
+doParallel       doParallel    1.0.17
+dplyr                 dplyr    1.0.10
+dtplyr               dtplyr     1.2.2
+ellipsis           ellipsis     0.3.2
+evaluate           evaluate      0.15
+fansi                 fansi     1.0.3
+farver               farver     2.1.1
+fastmap             fastmap     1.1.0
+forcats             forcats     0.5.2
+foreach             foreach     1.5.2
+Formula             Formula     1.2-4
+fs                       fs     1.5.2
+gargle               gargle     1.2.1
+generics           generics     0.1.3
+ggplot2             ggplot2     3.3.6
+glmnet               glmnet     4.1-4
+glue                   glue     1.6.2
+googledrive     googledrive     2.0.0
+googlesheets4 googlesheets4     1.0.1
+gridExtra         gridExtra       2.3
+gtable               gtable     0.3.0
+haven                 haven     2.5.1
+highr                 highr       0.9
+Hmisc                 Hmisc     4.7-0
+hms                     hms     1.1.2
+htmlTable         htmlTable     2.4.1
+htmltools         htmltools     0.5.3
+htmlwidgets     htmlwidgets     1.5.4
+httr                   httr     1.4.4
+ids                     ids     1.0.1
+interp               interp     1.1-3
+isoband             isoband     0.2.5
+iterators         iterators    1.0.14
+jpeg                   jpeg     0.1-9
+jquerylib         jquerylib     0.1.4
+jsonlite           jsonlite     1.8.0
+knitr                 knitr      1.39
+labeling           labeling     0.4.2
+latticeExtra   latticeExtra    0.6-30
+lifecycle         lifecycle     1.0.1
+lpSolve             lpSolve    5.6.16
+lubridate         lubridate     1.8.0
+magrittr           magrittr     2.0.3
+matrixcalc       matrixcalc     1.0-6
+memoise             memoise     2.0.1
+mime                   mime      0.12
+modelr               modelr     0.1.9
+munsell             munsell     0.5.0
+openssl             openssl     2.0.3
+pillar               pillar     1.8.0
+pkgconfig         pkgconfig     2.0.3
+png                     png     0.1-7
+prettyunits     prettyunits     1.1.1
+processx           processx     3.7.0
+progress           progress     1.2.2
+ps                       ps     1.7.1
+purrr                 purrr     0.3.4
+R6                       R6     2.5.1
+rappdirs           rappdirs     0.3.3
+RColorBrewer   RColorBrewer     1.1-3
+Rcpp                   Rcpp     1.0.9
+RcppEigen         RcppEigen 0.3.3.9.2
+readr                 readr     2.1.2
+readxl               readxl     1.4.1
+rematch             rematch     1.0.1
+rematch2           rematch2     2.1.2
+reprex               reprex     2.0.2
+rlang                 rlang     1.0.4
+rmarkdown         rmarkdown      2.16
+rstudioapi       rstudioapi      0.13
+rvest                 rvest     1.0.3
+sass                   sass     0.4.2
+scales               scales     1.2.0
+selectr             selectr     0.4-2
+shape                 shape     1.4.6
+stringi             stringi     1.7.8
+stringr             stringr     1.4.0
+sys                     sys       3.4
+tibble               tibble     3.1.8
+tidyr                 tidyr     1.2.1
+tidyselect       tidyselect     1.1.2
+tidyverse         tidyverse     1.3.2
+tinytex             tinytex      0.41
+tzdb                   tzdb     0.3.0
+utf8                   utf8     1.2.2
+uuid                   uuid     1.1-0
+vctrs                 vctrs     0.4.1
+viridis             viridis     0.6.2
+viridisLite     viridisLite     0.4.0
+vroom                 vroom     1.5.7
+withr                 withr     2.5.0
+xfun                   xfun      0.31
+xml2                   xml2     1.3.3
+yaml                   yaml     2.3.5
+zip                     zip     2.2.1

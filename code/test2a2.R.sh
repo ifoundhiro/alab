@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=10
+#SBATCH --cpus-per-task=11
 #SBATCH --mem-per-cpu=1G
-#SBATCH --partition=sched_mit_sloan_interactive
-#SBATCH --time=0-01:00
+#SBATCH --partition=sched_any_quicktest
+#SBATCH --time=0-00:15
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=hmiura@mit.edu
 #SBATCH --output=/dev/null
@@ -23,22 +23,17 @@ params='list(
 "caption_font_size"=12,
 "base_font_size"=14,
 "title_font_size"=16,
-"outcome_labels"=c(
-  "Win=1 Draw=0 Loss=0",
-  "Win=1 Loss=0 Draws Dropped",
-  "Win=1 Draw=0 Loss=-1",
-  "Number of Goals"),
-"predvar_label"="Mutual Information",
-"step_increase"=0.07,
-"ylim_min"=0,
-"ylim_max"=0.08,
-"export_width"=9,
-"export_height"=9,
-"title_combined"="Comparison of Mutual Information by Outcomes",
-"subtitle_combined"="1 Second Time Step; 3 Second Time Delay",
-"notes_bot_hjust"=0,
-"notes_bot_x"=0,
-"notes_bot_nspaces"=113
+"xvar"="alpha",
+"yvar"="mse",
+"ylim_min"=0.249,
+"ylim_max"=0.254,
+"width"=9,
+"height"=6,
+"title"="R Elastic Net Training Set Mean Squared Error",
+"ylab"="Mean Squared Error",
+"xlab"="Mixing Parameter",
+"line_color"="red",
+"line_size"=1.2
 )'
 
 # Execute script.

@@ -32,6 +32,7 @@ params="{
 'linewidth':1.5,
 'figheight':6,
 'figwidth':9,
+'ylim':[0.249,0.254],
 }"
 
 # Execute script.
